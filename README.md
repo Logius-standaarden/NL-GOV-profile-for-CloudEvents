@@ -1,2 +1,2 @@
 # notifcatieservices
-Project Notifcatieservices
+Project Notificatieservices
