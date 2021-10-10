@@ -1,0 +1,5 @@
+
+.DS_Store
+**/*_log
+docs/CloudEvents-NL-profiel/access_log
+docs/CloudEvents-NL-profiel/referer_log
