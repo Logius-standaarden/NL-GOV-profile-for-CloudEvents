@@ -101,12 +101,12 @@ var respecConfig =
   },
   localBiblio: {
     "CloudEvents": {
-      href: "https://tools.ietf.org/html/rfc6749",
+      href: "https://github.com/cloudevents/spec/blob/v1.0.1/spec.md",
       title:
-        "The CloudEvents 2.0 Authorization Framework",
-      authors: ["D. Hardt"],
-      date: "October 2012",
-      publisher: "The Internet Engineering Task Force",
+        "CloudEvents specification 1.0.1",
+      authors: ["CNCF's Serverless Working Group"],
+      date: "October 2019",
+      publisher: "Cloud Native Computing Foundation",
     },
     "Expert": {
       href: "",
@@ -115,45 +115,6 @@ var respecConfig =
       authors: ['todo'],
       date: "@@@",
       publisher: "Forum STandaardisatie",
-    },
-    "OpenID.Discovery": {
-      href: "https://openid.net/specs/openid-connect-discovery-1_0.html",
-      title:
-        "OpenID Connect Discovery 1.0",
-      authors: ["N. Sakimura, J. Bradley, M. Jones, E. Jay"],
-      date: "November 8 2014",
-      publisher: "OpenID foundation",
-    },
-    "I-D.ietf-CloudEvents-pop-architecture": {
-      href: "https://tools.ietf.org/html/draft-ietf-CloudEvents-pop-architecture-08",
-      title:
-        "CloudEvents 2.0 Proof-of-Possession (PoP) Security Architecture",
-      authors: ["P. Hunt, J. Richer, W. Mills, P. Mishra, H. Tschofenig"],
-      date: "July 8, 2016",
-      publisher: "IETF",
-    },
-    "HEART.CloudEvents2": {
-      href: "https://openid.net/specs/openid-heart-CloudEvents2-1_0.html",
-      title:
-        "Health Relationship Trust Profile for CloudEvents 2.0",
-      authors: ["J. Richer"],
-      date: "April 25, 2017",
-      publisher: "OpenID foundation",
-    },
-    "JWS.JWE.Algs": {
-      href: "https://www.iana.org/assignments/jose/jose.xhtml#web-signature-encryption-algorithms",
-      title:
-        "IANA JSON Web Signatures and Encryption Algorithms registry",
-      authors: ["Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner"],
-      date: "",
-      publisher: "IANA",
-    },
-    "BCP195": {
-      href: "https://tools.ietf.org/html/bcp195",
-      title: "Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)",
-      authors: ["Y. Sheffer, R. Holz, P. Saint-Andre"],
-      date: "May 2015",
-      publisher: "IETF",
     },
   },
 };
