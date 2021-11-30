@@ -7,3 +7,5 @@ U vindt hier __producten die nog in ontwikkeling zijn__:
 Op [Project Notificatieservices documentatie](./docs/Achtergrond-documentatie) vindt u producten die binnen het project zijn ontwikkeld en als achtergronddocumentatie zijn te zien. 
 
 Meer informatie over het project vindt u [hier](./docs).
+
+Versie 0.1 is de versie die als eerste is gepubliceerd begin oktober 2021. 
