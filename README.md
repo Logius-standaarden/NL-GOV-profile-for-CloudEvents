@@ -1,4 +1,4 @@
-# Project Notificatieservices v0.1
+# Project Notificatieservices v0.2 work-in-progress
 
 U vindt hier __producten die nog in ontwikkeling zijn__:
 1. [NL GOV profile for CloudEvents](./docs/CloudEvents-NL-profiel) : het voorgestelde standaard berichtformaat gebaseerd op de internationale CloudEvents standaard.
