@@ -106,18 +106,24 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - MUST be a non-empty string
   - MUST be unique within the scope of the producer
 - Examples:
-  - An event counter maintained by the producer
+  - An ID  counter maintained by the producer
   - A UUID
 
 **CloudEvents-NL**
 
-- An ID MUST be entered. No workarounds like “unknown”.
-- The purpose of the ID is that it actually identifies an event at the source. 
-  (For example, the ID could possibly be used to request information about the event from the source).
-- SHOULD use a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- 'Surrogate events' (CRUD or CRUD + event type) SHOULD be provided with an ID.
-- A random ID SHOULD be use if no ID is available that can sustainably identify the event (durable = it can be referenced at the source later). The limitations of this ID (eg that it makes no sense to communicate with the source about it) MUST be clearly stated in the domain standard/documentation.
-
+- Constraints:
+  - If an ID is available that can durable identify the event, producers SHOULD 
+    use that ID. (for example so that consumers MAY use `id` to request information
+    about the event from the source).
+  - If no ID is available that can durable identify the event producers SHOULD use a random ID:
+    - SHOULD use a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    - MUST describe the limitations (eg that it's just a random ID and no identification
+      of the event occurred).
+- Examples:
+  - 'doc2021033441' (ID of the document created as a result of an event that occurred).
+  - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
+    being able to uniquely identify the event.
+ 
 #### source
 
 - Type: `URI-reference`
@@ -154,9 +160,20 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 
 **CloudEvents-NL**
 
-- SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier. For example: urn:nld:gemeente-amersfoort, urn:waterschap-rivierenland
-- The ID of an event SHOULD also be unique without the source. See also the note about UUID with the id attribute.
-- SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
+- Constraints:
+  - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
+  - SHOULD contain consecutive a unique identifier of:
+    - the organization that publishes the event
+    - the source system that publishes the event.
+  - involved organizations SHOULD agree on how organizations and systems are uniquely identified (e.g. via the use of OIN, KVK-nummer or for organization identification);
+  - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain to national, European or worldwide)
+  - SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
+- Examples:
+  - urn:nld:oin:00000001823288444000:systeem:BRP-component
+  - urn:nld:kvknr:09220932.burgerzakensysteem
+  - urn:nld:gemeente-nijmegen.burgerzakensysteem
+  - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
+  Comment: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
 
 #### specversion
 
@@ -201,14 +218,27 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 
 **CloudEvents-NL**
 
-- [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) MUST be used 
-- The content of the attribute is determined by the event producter (and has a domain-specific meaning).
-- Types can be specified by adding as a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
-- In descending order of preference use the name of a:
-  - data source (for example: 'nl.brp.verhuizing)
-  - domain (for example: nl.natuurlijke-personen.verhuizing). For the domain designation plural MUST be used.
+Constraints:
+- MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
+- MAY be specified by adding as a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
+- Producers MUST facilitate consumers to request the exact meaning.
+- SHOULD stay the same when a CloudEvent's data changes in a backwardly-compatible way.
+- SHOULD change when a CloudEvent's data changes in a backwardly-incompatible way.
+- The producer SHOULD produce both the old event and the new event for some time (potentially forever) in order to
+ avoid disrupting consumers.
+- The producer decides if versioning is used.
+- If versioning is used [semantic versioning](https://semver.org/) SHOULD be used; a prefix of 'v' SHOULD be 
+  used to indicate it is a version number (e.g. 'v1.2.3')
+- In descending order of preference one SHOULD use the name of a:
+  - data source (for example: 'nl.brp.persoon-verhuisd)
+  - domain (for example: nl.natuurlijke-personen.persoon-verhuisd); for domain designation plural MUST be used.
   - law or rule (for example: nl.amsterdam.erfpacht.overdracht)
-- Names of organizations SHOULD NOT be used.
+- Names of organizations SHOULD NOT be used (because they are not durable).
+Examples:
+- nl.vng.zgw.zaken.status.create or nl.overheid.zaken.zaakstatus-gewijzigd (context is relevant when defining type)
+- nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
+- nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
+- nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
 
 ### OPTIONAL Attributes
 
@@ -253,7 +283,11 @@ on the definition of OPTIONAL.
 
 **CloudEvents-NL**
 
-- JSON SHOULD be used
+Constraints:
+- JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API Designrules extensions in development. Part of this is the intention to
+name JSON as the primary representation format for APIs. Because APIs play an 
+important role in communicating events (eg when using webhooks) the JSON format is 
+preferred to use for payload data).
 
 #### dataschema
 
@@ -268,7 +302,12 @@ on the definition of OPTIONAL.
 
 **CloudEvents-NL**
 
-- It should be prevented that different schedules arise for the same data.
+Constraints:
+- It SHOULD be prevented that different schedules arise for the same data.
+- The dataschema attribute is expected to be informational, largely to be used 
+  during development and by tooling that is able to provide diagnostic information 
+  over arbitrary CloudEvents with a data content type understood by that tooling 
+  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning))
 
 #### subject
 
@@ -302,8 +341,14 @@ on the definition of OPTIONAL.
 
 **CloudEvents-NL**
 
+Constraints:
 - Decision on whether or not to use the attribute and/or the exact interpretation is postponed. 
-To be determined partly on the basis of agreements about subscription and filtering.
+To be determined partly on the basis of future agreements about subscription and filtering.
+
+Example:
+  - `source`: urn:nld:oin:00000001823288444000:systeem:BRP-component 
+  - `type`: nl.brp.persoon-gehuwd
+  - `subject`: 123456789 (citizen service number)
 
 #### time
 
@@ -320,9 +365,13 @@ To be determined partly on the basis of agreements about subscription and filter
     [RFC 3339](https://tools.ietf.org/html/rfc3339)
 
 **CloudEvents-NL**
-- The time the event was logged SHOULD be used
-- The time the event occurred SHOULD NOT be used (this belongs to the event data and not to the context data).
-- That meaning of the attribute value MUST be clearly stated in the domain standard/documentation.
+- The time the event was logged SHOULD be used (in many cases this is the only 
+  time that can be determined unambiguously).
+- The exact meaning of `time` MUST be clearly documented.
+- The time when an event occurred in reality SHOULD NOT be used (if there is a need for this 
+  among consumers, this can be included in payload data).
+- If the time when an event occurred in reality is needed for things like 
+  routing or filtering, it can be included as a context attribute by the producer.
 
 ### Extension Context Attributes
 
@@ -372,9 +421,13 @@ events.
 
 **CloudEvents-NL**
 
-Two of the extension attributes included by CloudEvents are included as 
-optional attributes in the CloudEvents-NL profile.
-
+- Two of the extension attributes included by CloudEvents ('dataref' and 
+  'sequence') are included as optional attributes in the CloudEvents-NL profile 
+  because it is foreseen that there is often a need to use these attributes.
+- Extension attributes should be kept minimal to ensure the CloudEvent can be 
+  properly serialized and transported (e.g. when using HTTP-headers most HTTP 
+  servers will reject requests with excessive HTTP header data).
+  
 #### dataref
 
 - Type: `URI-reference`
@@ -421,8 +474,13 @@ both `data` and `dataref` (serialized as JSON):
 
 **CloudEvents-NL**
 
-- MAY be used to reference an external data location (for example: a link back to the producer of the evant that can be queried for more information).
-- MAY be used to implenment 'informatiearm notificeren' where the consumer of the event receives some minimal information on the nature of the event, but then has to issue a request back to the sender to decide what to do next. 
+- MAY be used to reference an external data location (for example: a link back to 
+  the producer of the event that can be queried for more information about the event).
+- MAY be used to implenment 'informatiearm notificeren' where the consumer of the 
+  event receives some minimal information on the nature of the event, but then has 
+  to issue a request back to the producer to obtain additional information (the time 
+  aspect may deserve attention because changes may occur in the period that consumers
+  are notified and the time of requesting additional information).
 
 #### Sequence
 
@@ -469,5 +527,8 @@ following semantics:
 
   **CloudEvents-NL**
 
-- Decision on whether or not to use the attribute and/or the exact interpretation is postponed. 
-To be determined partly on the basis of agreements about the use of pull mechanisms and (re)synchronization.
+- Attribute 'sequence' can be especially helpful in situations where a form of 
+  'pull mechanism' is used ((e.g. periodically fetching events by consumers 
+  via HTTP request)) or where there is a need for (re)synchronization (e.g. 
+  after errors have occurred).
+

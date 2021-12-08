@@ -13,17 +13,18 @@
 
 var respecConfig =
 {
-  specStatus: "GN-BASIS",
+  specStatus: "GN-WV",
   specType: "ST",
   // format: "markdown",
-  pubDomain: "api",
-  shortName: "CloudEvents",
+  pubDomain: "notificatieservices",           //toegevoegd aan github pad
+  shortName: "notificaties",
 
-  publishDate: "2021-10-07",
-  //previousPublishDate: "2019-02-13",
+  //publishDate: "2021-12-07",
+  //geeft probleem in header als gevuld previousPublishDate: "2021-12-07",
 
-  publishVersion: "v0.1",
-  //previousPublishDate: "0.9",
+  //publishVersion niet zichtbaar nu
+  //publishVersion: "v0.2",
+  //previousPublishVersion: "0.1",
 
   //previousMaturity: "GN-CV",
   editors:
@@ -31,12 +32,7 @@ var respecConfig =
       {
         name: "Ad Gerrits",
         company: "VNG Realisatie",
-        companyURL: "http://www.VNGRealisatie.nl/",
-      },
-      {
-        name: "Jeanot Bijpost",
-        company: "VNG Realisatie",
-        companyURL: "http://www.VNGRealisatie.nl/",
+        companyURL: "http://www.vngrealisatie.nl/",
       }
     ],
   authors:
@@ -46,15 +42,20 @@ var respecConfig =
         company: "VNG Realisatie",
         companyURL: "http://www.vngrealisatie.nl/",
       },
+      {
+        name: "Ad Gerrits",
+        company: "VNG Realisatie",
+        companyURL: "http://www.vngrealisatie.nl/",
+      }      
     ],
-  github: "https://github.com/VNG-Realisatie/notifcatieservices/",
-  issueBase: "https://github.com/VNG-Realisatie/notifcatieservices/issues",
+  github: "https://github.com/VNG-Realisatie/notificatieservices/",
+  issueBase: "https://github.com/VNG-Realisatie/notificatieservices/issues",
   licence: "cc-by-nd",
 
   nl_github: {
-    issueBase: "https://github.com/VNG-Realisatie/notifcatieservices/issues",
-    revision: "https://github.com/VNG-Realisatie/notifcatieservices/commits",
-    pullsBase: "https://github.com/VNG-Realisatie/notifcatieservices/pulls",
+    issueBase: "https://github.com/VNG-Realisatie/notificatieservices/issues",
+    revision: "https://github.com/VNG-Realisatie/notificatieservices/commits",
+    pullsBase: "https://github.com/VNG-Realisatie/notificatieservices/pulls",
   },
 
   // Controls if linked "§" section markers are added to a document
@@ -114,7 +115,7 @@ var respecConfig =
         "Expertadvies CloudEvents 2.0",
       authors: ['todo'],
       date: "@@@",
-      publisher: "Forum STandaardisatie",
+      publisher: "Forum Standaardisatie",
     },
   },
 };

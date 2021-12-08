@@ -1,5 +1,5 @@
 
 .DS_Store
 **/*_log
-docs/CloudEvents-NL-profiel/access_log
-docs/CloudEvents-NL-profiel/referer_log
+docs/GOV-NL-profile-for-CloudEvents/access_log
+docs/GOV-NL-profile-for-CloudEvents/referer_log

@@ -21,8 +21,4 @@ implementations MUST support the [JSON format](json-format.md).
 For more information on the history, development and design rationale behind the
 specification, see the [CloudEvents Primer](primer.md) document.
 
-**CloudEvent-NL**
-
-This profile is based upon the CloudEvents 1.0 specification [[CloudEvents]] as published by the @@@. 
-It should be considered a fork of this profile as the CloudEvents specification is geared more towards generic use and in the Netherlands we want to add a number of requirements for the Dutch situation with the goal to agree on how to use the CloudEvents specification. 
 
