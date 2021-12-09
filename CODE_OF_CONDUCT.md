@@ -2,9 +2,8 @@
 
 ## Onze belofte
 
-We streven naar het open ontwikkelen en delen van producten binnen project
-Notificatieservices (bijv. het NL GOV profile for CloudEvents). We
-willen dat projectleden en bijdragers in een prettige en positieve sfeer samenwerken.
+We streven naar het open samenwerken en ontwikkelen van het NL GOV profile for CloudEvents. 
+We willen dat bijdragers in een prettige en positieve sfeer samenwerken.
 Iedere bijdrager is gelijkwaardig en wordt gewaardeerd voor zijn/haar bijdrage.
 We staan open voor alle meningen en proberen verschillende meningen en belangen eerlijk,
 objectief en respectvol af te wegen.

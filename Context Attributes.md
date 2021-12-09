@@ -99,7 +99,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Type: `String`
 - Description: Identifies the event. Producers MUST ensure that `source` + `id`
   is unique for each distinct event. ~~If a duplicate event is re-sent (e.g. due
-  to a network error) it MAY have the same `id`.~~ Consumers ~~MAY~~ MUST assume that
+  to a network error) it MAY have the same `id`.~~ Consumers MAY assume that
   Events with identical `source` and `id` are duplicates.
 - Constraints:
   - REQUIRED
@@ -284,9 +284,9 @@ on the definition of OPTIONAL.
 **CloudEvents-NL**
 
 Constraints:
-- JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API Designrules extensions in development. Part of this is the intention to
+- JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API-Design Rules Extensions in development. Part of this is the intention to
 name JSON as the primary representation format for APIs. Because APIs play an 
-important role in communicating events (eg when using webhooks) the JSON format is 
+important role in communicating events (eg when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
 
 #### dataschema
@@ -525,10 +525,10 @@ following semantics:
 - The sequence wraps around from 2,147,483,647 (2^31 -1) to -2,147,483,648
   (-2^31).
 
-  **CloudEvents-NL**
+**CloudEvents-NL**
 
-- Attribute 'sequence' can be especially helpful in situations where a form of 
-  'pull mechanism' is used ((e.g. periodically fetching events by consumers 
-  via HTTP request)) or where there is a need for (re)synchronization (e.g. 
+- Attribute 'sequence' can be helpful in situations where:
+-  a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers 
+  via HTTP request)) or
+- where there is a need for (re)synchronization (e.g. 
   after errors have occurred).
-

@@ -43,19 +43,23 @@ var respecConfig =
         companyURL: "http://www.vngrealisatie.nl/",
       },
       {
+        name: "Werkgroep Berichtenstandaard",
+        company: "Overheidsorganisaties en leveranciers",
+      },
+      {
         name: "Ad Gerrits",
         company: "VNG Realisatie",
         companyURL: "http://www.vngrealisatie.nl/",
       }      
     ],
-  github: "https://github.com/VNG-Realisatie/notificatieservices/",
-  issueBase: "https://github.com/VNG-Realisatie/notificatieservices/issues",
+  github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/",
+  issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues",
   licence: "cc-by-nd",
 
   nl_github: {
-    issueBase: "https://github.com/VNG-Realisatie/notificatieservices/issues",
-    revision: "https://github.com/VNG-Realisatie/notificatieservices/commits",
-    pullsBase: "https://github.com/VNG-Realisatie/notificatieservices/pulls",
+    issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues",
+    revision: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/commits",
+    pullsBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/pulls",
   },
 
   // Controls if linked "§" section markers are added to a document

@@ -1,4 +1,4 @@
-# Appendix 1: JSON, HTTP and Webhooks
+# Appendix 1: Use of JSON, HTTP and Webhook
 
 This appendix describes how the CloudEvent-NL profile can be applied when using the JSON format, the HTTP protocol and the Webhook pattern.
 
