@@ -32,8 +32,8 @@ For more information about a particular attribute, see the detailed attribute de
   "subject": "123456789",
   "id": "f3dce042-cd6e-4977-844d-05be8dce7cea",
   "time": "2021-12-10T17:31:00Z",
-  "nl-brp-geslacht": "V",
-  "nl-brp-nationaliteit": "0083",
+  "nlbrpnationaliteit": "0083",
+  "geheimnummer": null,
   "dataref": "https://gemeenteX/api/persoon/123456789",
   "sequence": "1234",
   "sequencetype": "integer",
@@ -54,10 +54,15 @@ For more information about a particular attribute, see the detailed attribute de
 |   &nbsp; subject | BSN as example; yet to be seen if and how attribute 'subject' will be used |
 |   &nbsp; id | Uuid (unique)|
 |   &nbsp; time | Time when event was recorded |
-|   &nbsp; nl-brp-geslacht | Extension attribute with a BRP-domain specific meaning |
-|   &nbsp; nl-brp-nationaliteit | Extension attribute with a BRP-domain specific meaning |
+|   &nbsp; nlbrpnationaliteit | Extension attribute with a BRP-domain specific meaning |
+|   &nbsp; geheimnummer | Extension attribute, to be treated as the equivalent of unset or omitted |
 |   &nbsp; dataref  | Extension attribute with a reference to where to get additional information |
 |   &nbsp; sequence | Extension attribute with an event tracking number |
 |   &nbsp; sequencetype | Extension attribut with indication of the type of sequence used |
 |   &nbsp; datacontenttype  | Indication of content type in attribute 'data' |
 |   &nbsp; data | Content information for consumer ('payload') |
+
+Attribute names meet the CloudEvents specification requirements:
+  - MUST consist of lower-case letters ('a' to 'z') or digits ('0' to '9') from the ASCII character set. 
+  - SHOULD be descriptive and terse and SHOULD NOT exceed 20 characters in length.
+
