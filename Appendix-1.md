@@ -2,16 +2,21 @@
 
 This appendix describes how the CloudEvent-NL profile can be applied when using the JSON format, the HTTP protocol and the Webhook pattern.
 
-In addition to the CloudEvent specification the [Serverless Working Group](https://github.com/cncf/wg-serverless) has described for different formats and protocols how they can be used in a standardized way in combination with the CloudEvents message format. A description of common formats and protocols can be found at: https://github.com/cloudevents/spec#cloudevents-documents.
+The CloudEvent-NL message format can be used when using different formats and protocols. CloudEvents has a [layered architecture](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#architecture) for this. In order to be able to use the GOV-NL profile properly in practice, agreements must also be made when a certain format and/or protocol is used.
 
-Within the Dutch government, frequent use is made of the JSON format, the HTTP protocol and the Webhook pattern for data exchange. For example, a common way to send events to consumers is to use a webhook where a message in JSON format is sent via the HTTP protocol. In addition to standardization through the use of the NL GOV profile, we therefore work towards standardization when JSON, HTTP and Webhook are used.
+In addition to the CloudEvent specification the [Serverless Working Group](https://github.com/cncf/wg-serverless) has described for [several commonly used formats](https://github.com/cloudevents/spec#cloudevents-documents) and protocols how they can be used in a standardized way in combination with the CloudEvents message format. 
 
-The NL GOV profile is intended as a formal government-wide standard to be used. This does not yet apply to the additional specification for the use of JSON, HTTP and Webhook. The specifications for them therefore have the character of a 'guideline' ("a statement by which to determine a course of action", [Wikipedia](https://en.wikipedia.org/wiki/Guideline)).
+Within the Dutch government, frequent use is made of the JSON format, the HTTP protocol and the Webhook pattern for data exchange. For example, a common way to send events to consumers is to use the webhook pattern where a message in JSON format is sent via the HTTP protocol. Further standardization than just event description via the NL GOV profile therefore benefits most from agreements around these 3 areas. In addition to standardization through the use of the NL GOV profile, we therefore work towards standardization on exchanging event information when using JSON, HTTP and Webhook.
 
-When using the NL GOV profile in combination with JSON, HTTP or Webhook, the following specifications SHOULD be used:
-- [JSON Event Format for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md): The JSON Format for CloudEvents defines how events are expressed in JavaScript Object Notation (JSON) Data Interchange Format [RFC8259](https://tools.ietf.org/html/rfc8259).
-- [HTTP Protocol Binding for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/http-protocol-binding.md): The HTTP Protocol Binding for CloudEvents defines how events are mapped to HTTP 1.1 request and response messages.
-- [HTTP 1.1 Web Hooks for Event Delivery](https://github.com/cloudevents/spec/blob/v1.0.1/http-webhook.md): The specification aims to provide a definition for use with CNCF CloudEvents, but is considered generally usable beyond the scope of CloudEvents.
+The NL GOV profile is intended to be used as a government-wide standard. This does not yet apply to the additional specification for the use of JSON, HTTP and Webhook. The specifications for them have the character of 'guidelines' ("a statement by which to determine a course of action", [Wikipedia](https://en.wikipedia.org/wiki/Guideline)).
 
-In addition to the three specifications mentioned, a number of recommendations are made in [Guideline for JSON, HTTP en Webhook](Use-of-json-http-webhook.md) with regard to use. These are intended both to make use within the government more unambiguous and to work towards standardization in the long term.
+Similar to what happened in the NL GOV profile for the CloudEvents specification, the guidelines make recommendations
+about the use of the specifications within the context of the Dutch government. These are intended to make use of the specifications more unambiguous and to work towards standardisation in the long term.
 
+For the time being, the following constraints apply:
+
+- One SHOULD use the [JSON Event Format for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md) and pay attention to the remarks in the guideline [GOV NL Guideline for JSON](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-JSON.md).
+
+- One SHOULD use the [HTTP Protocol Binding for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/http-protocol-binding.md) specification and pay attention to the remarks in the guideline [GOV NL Guideline for HTTP](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-HTTP.md).
+
+- One SHOULD use the [HTTP 1.1 Web Hooks for Event Delivery](https://github.com/cloudevents/spec/blob/v1.0.1/http-webhook.md) specification and pay attention to the remarks in the guideline [GOV NL Guideline for Webhook](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-Webhook.md).
