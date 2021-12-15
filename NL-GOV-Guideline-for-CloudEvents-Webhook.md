@@ -109,4 +109,3 @@ HTTP/1.1 204 No Content
 ## Normative References
 
 - [HTTP 1.1 Web Hooks for Event Delivery - Version 1.0.1](https://github.com/cloudevents/spec/blob/v1.0.1/http-webhook.md)
-
