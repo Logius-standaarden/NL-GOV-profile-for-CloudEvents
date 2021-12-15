@@ -15,8 +15,8 @@ about the use of the specifications within the context of the Dutch government. 
 
 For the time being, the following constraints apply:
 
-- One SHOULD use the [JSON Event Format for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md) and pay attention to the remarks in the guideline [GOV NL Guideline for JSON](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-JSON.md).
+- One SHOULD use the [JSON Event Format for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md) specification and pay attention to the points of attention and recommendations in the guideline [GOV NL Guideline for JSON](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-JSON.md).
 
-- One SHOULD use the [HTTP Protocol Binding for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/http-protocol-binding.md) specification and pay attention to the remarks in the guideline [GOV NL Guideline for HTTP](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-HTTP.md).
+- One SHOULD use the [HTTP Protocol Binding for CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/http-protocol-binding.md) specification and pay attention to the points of attention and recommendations in the guideline [GOV NL Guideline for HTTP](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-HTTP.md).
 
-- One SHOULD use the [HTTP 1.1 Web Hooks for Event Delivery](https://github.com/cloudevents/spec/blob/v1.0.1/http-webhook.md) specification and pay attention to the remarks in the guideline [GOV NL Guideline for Webhook](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-Webhook.md).
+- One SHOULD use the [HTTP 1.1 Web Hooks for Event Delivery](https://github.com/cloudevents/spec/blob/v1.0.1/http-webhook.md) specification and pay attention to the points of attention and recommendations in the guideline [GOV NL Guideline for Webhook](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/GOV-NL-Guideline-for-Webhook.md).

@@ -5,11 +5,6 @@ var respecConfig = {
   publishDate: "2021-12-07",
   editors: [
     {
-      name: "Jeanot Bijpost",
-      company: "VNG Realisatie",
-      companyURL: "https://www.vngrealisatie.nl/",
-    },
-    {
       name: "Gershon Jansen",
       company: "VNG Realisatie",
       companyURL: "https://www.vngrealisatie.nl/",
@@ -19,10 +14,10 @@ var respecConfig = {
       company: "VNG Realisatie",
       companyURL: "https://www.vngrealisatie.nl/",
     },],
-  shortName: "Nederlands profiel CloudEvents 1.0",
+  shortName: "NL GOV profile for CloudEvents",
   subtitle: "Werkversie",
-  github: "https://github.com/VNG-Realisatie/notifcatieservices",
-  issueBase: "https://github.com/VNG-Realisatie/notifcatieservices/issues/",
+  github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents",
+  issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues/",
   localBiblio: {
     "CloudEvents": {
       href: "https://github.com/cloudevents/spec/blob/v1.0.1/spec.md",
