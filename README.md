@@ -7,13 +7,18 @@ Het profiel is gebaseerd op de [CloudEvents](https://cloudevents.io/) specificat
 specificatie voor beschrijven van gebeurtenisgegevens in gangbare formaten
 om interoperabiliteit tussen services, platforms en systemen te bieden.
 
-Een van de uitgangspunten van het project was om zoveel mogelijk aan te sluiten bij wat wereldwijd gebruikelijk is (bijv. notificeren via het [publish-subscribe patroon](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) en om voort te bouwen op wat al ontwikkeld is (bijv. [CloudEvents](https://cloudevents.io/). In plaats van al uitgevonden wielen opnieuw, en waarschijnlijk slechter, te gaan uitvinden is aangesloten bij wat
-wereldwijd op dit gebied gebeurt en maken aanvullende afspraken waar dit binnen de context van de Nederlandse overheid nodig of wenselijk is.
+Een van de uitgangspunten van het project was om zoveel mogelijk aan te sluiten bij wat wereldwijd gebruikelijk is (bijv. notificeren via het [publish-subscribe patroon](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) en om voort te bouwen op wat al ontwikkeld is (bijv. [CloudEvents](https://cloudevents.io/). In plaats van al uitgevonden wielen opnieuw, en waarschijnlijk slechter, te gaan uitvinden is aangesloten bij wat wereldwijd op dit gebied gebeurt en maken aanvullende afspraken waar dit binnen de context van de Nederlandse overheid nodig of wenselijk is.
 
-Het GOV NL profiel, en enkele daaraan gerelateerde producten, zijn nog volop in ontwikkeling. In 2021 is een eerste versie van het GOV NL profiel gemaakt samen met een community met medewerkers van overheidsorganiaties en leveranciers 🙏.  Als u een bijdrage wilt leveren aan verdere ontwikkeling wordt dit zeer gewaardeerd. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](../../CONTRIBUTING.md).
+In 2021 samen met een community met medewerkers van overheidsorganiaties en leveranciers het [NL GOV profile for CloudEvents](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) gemaakt. Dit profiel is nog in ontwikkeling. Als u een bijdrage wilt leveren aan verdere ontwikkeling wordt dit zeer gewaardeerd 🙏. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](../../CONTRIBUTING.md).
 
-**Bekijk hier [de laatste werkversie](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) van 
-het GOV NL profiel.**
+**Bekijk hier [de laatste werkversie](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) van
+het NL GOV for CloudEvent profile.**
 
-Er is ook een '[Guideline for JSON, HTTP en Webhook](Use-of-json-http-webhook.md)' gemaakt om toe te lichten hoe het GOV NL profiel is toe te passen als gebruik wordt gemaakt van het JSON-gegevensformaat, het HTTP-protocol en/of het Webhook interactiepatroon. Deze handreiking verwijst naar door de Serverless Working Group ontwikkelde specificaties en geeft handreikingen hoe daar binnen de Nederlandse context effectief gebruik van is te maken. Afhankelijk van nog te maken keuzes kan deze handreiking zich, vergelijkbaar als het NL GOV profiel, ontwikkelen tot een overheidsbrede standaard die bijdraagt aan verdere interoperabiliteit. Uw feedback op deze handreiking is ook zeer welkom.
 
+Naast het profiel zijn ook een drietal handreikingen gemaakt waarin is toegelicht hoe het NL GOV profiel is toe te passen als gebruik wordt gemaakt van het:
+
+- [JSON-formaat](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-JSON.md).
+- [HTTP-protocol](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-HTTP.md).
+- [Webhook-patroon](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-Webhook.md).
+
+Deze handreikingen verwijzen naar door de Serverless Working Group ontwikkelde specificaties en lichten toe hoe die binnen de context van de Nederlandse overheid effectief zijn te gebruiken. Doel is om, vergelijkbaar bij het NL GOV profiel zelf, stapsgewijs te komen tot meer afspraken en standaardisatie om zo interoperabiliteit te vergroten. Uw feedback op de handreikingen is uiteraard ook zeer welkom.
