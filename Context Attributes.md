@@ -166,14 +166,14 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - the organization that publishes the event
     - the source system that publishes the event.
   - involved organizations SHOULD agree on how organizations and systems are uniquely identified (e.g. via the use of OIN, KVK-nummer or for organization identification);
-  <font color="green"> 
+  <font color="red"> 
   - In line with [API Designrules identification ](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-ext-20211013/#identification):
     - SHOULD use the "[organisatie-identificatienummer](https://www.logius.nl/diensten/oin)" (OIN) for identifying government organizations)
     - SHOULD use the [KvK-nummer](https://www.kvk.nl/informatiebank/kvk-nummer-alles-wat-je-moet-weten/) for identifying non-government organizations (companies, associations, foundations etc...)
     - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
-  </font>
   - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain to national, European or worldwide)
-    - SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
+  </font>
+  - SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
 - Examples:
   - urn:nld:oin:00000001823288444000:systeem:BRP-component
   - urn:nld:kvknr:09220932.burgerzakensysteem
