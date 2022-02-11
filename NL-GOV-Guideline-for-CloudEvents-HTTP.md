@@ -101,7 +101,7 @@ ce-type: nl.overheid.zaken.zaakstatus-gewijzigd
 ce-id: f3dce042-cd6e-4977-844d-05be8dce7cea
 ce-source: urn:nld:oin:00000001823288444000:systeem:BRP-component
 ... further attributes omitted ...
-Content-Type: application/cloudevents+json; charset=utf-8
+Content-Type: application/json; charset=utf-8
 Content-Length: nnnn
 
 {
