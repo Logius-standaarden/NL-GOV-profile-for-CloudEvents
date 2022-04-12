@@ -7,7 +7,7 @@ specificatie om gebeurtenisgegevens gestandaardiseerd te beschrijven en bij gebr
 
 Een van de uitgangspunten van het project Noficatieservices is om maximaal aan te sluiten bij wat wereldwijd gebruikelijk is (bijv. notificeren via het [publish-subscribe patroon](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) en om voort te bouwen op bestaande standaarden (bijv. [CloudEvents](https://cloudevents.io/). In plaats van al uitgevonden wielen opnieuw (en waarschijnlijk slechter) te gaan uitvinden is aangesloten bij wat wereldwijd gebeurt rondom gebeurtenis gedreven werken en notificeren. Daarop voortbouwens zijn aanvullende afspraken gemaakt voor waar dit binnen de context van de Nederlandse overheid nodig of wenselijk is.
 
-In 2021 samen met een community met medewerkers van overheidsorganiaties en leveranciers het [NL GOV profile for CloudEvents](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) gemaakt. Dit profiel is nog in ontwikkeling. Als u een bijdrage wilt leveren aan verdere ontwikkeling wordt dit zeer gewaardeerd. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](../../CONTRIBUTING.md).
+In 2021 samen met een community met medewerkers van overheidsorganiaties en leveranciers het [NL GOV profile for CloudEvents](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) gemaakt. Dit profiel is nog in ontwikkeling. Als u een bijdrage wilt leveren aan verdere ontwikkeling wordt dit zeer gewaardeerd. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](CONTRIBUTING.md).
 
 **Bekijk hier [de laatste werkversie](https://vng-realisatie.github.io/NL-GOV-profile-for-CloudEvents/) van
 het NL GOV for CloudEvents profile.**
