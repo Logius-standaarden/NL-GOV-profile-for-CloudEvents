@@ -20,3 +20,7 @@ Naast het profiel zijn ook een drietal handreikingen gemaakt waarin is toegelich
 - [Webhook-patroon](https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-Webhook.md)
 
 Deze handreikingen verwijzen naar door de Serverless Working Group ontwikkelde specificaties en lichten toe hoe die binnen de context van de Nederlandse overheid effectief zijn te gebruiken. Doel is om, vergelijkbaar bij het NL GOV profiel zelf, stapsgewijs te komen tot meer afspraken en standaardisatie om zo interoperabiliteit te vergroten. Uw feedback op de handreikingen is uiteraard ook zeer welkom.
+
+Beheerder van deze repository is Ad Gerrits (VNG): ad.gerrits@vng.nl
+
+Voor projectgerelateerde vragen kunt u contact opnemen met Stijn Schrijvers (VNG): stijn.schrijvers@vng.nl
