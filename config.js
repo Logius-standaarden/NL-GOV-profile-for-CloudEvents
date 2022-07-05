@@ -62,7 +62,7 @@ var respecConfig =
   // nl_organisationName is used for some company specific values in the header (and Sotd)
   // currently supported: Logius and Geonovum (default)  
   // ### was Logius
-  nl_organisationName: "VNG Realisatie",
+  nl_organisationName: "Ministerie van BZK",
 
   // prefix for the names of company specific css, svg and ico prefixes
   // defaults to "GN-"  
