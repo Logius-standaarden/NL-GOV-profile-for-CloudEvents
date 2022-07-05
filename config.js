@@ -88,11 +88,11 @@ var respecConfig =
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
   nl_logo: {
     src: "https://www.vngrealisatie.nl/themes/custom/tagordo/dist/images/Logo.svg",
-    alt: "VNG Realisatie",
-    id: "VNG Realisatie",
+    alt: "Ministerie van BZK",
+    id: "Ministerie van BZK",
     height: 77,
     width: 44,
-    url: "https://www.vngrealisatie.nl",
+    url: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
   },
   localBiblio: {
     "CloudEvents": {
