@@ -23,8 +23,8 @@ var respecConfig =
   //geeft probleem in header als gevuld previousPublishDate: "2021-12-07",
 
   //publishVersion niet zichtbaar nu
-  //publishVersion: "v0.2",
-  //previousPublishVersion: "0.1",
+  //publishVersion: "v0.3",
+  //previousPublishVersion: "0.2.1",
 
   //previousMaturity: "GN-CV",
   editors:
@@ -38,19 +38,9 @@ var respecConfig =
   authors:
     [
       {
-        name: "Gershon Jansen",
-        company: "VNG Realisatie",
-        companyURL: "http://www.vngrealisatie.nl/",
-      },
-      {
         name: "Werkgroep Berichtenstandaard",
         company: "Overheidsorganisaties en leveranciers",
-      },
-      {
-        name: "Ad Gerrits",
-        company: "VNG Realisatie",
-        companyURL: "http://www.vngrealisatie.nl/",
-      }      
+      }
     ],
   github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/",
   issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues",
