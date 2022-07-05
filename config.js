@@ -39,7 +39,7 @@ var respecConfig =
     [
       {
         name: "Werkgroep Berichtenstandaard",
-        company: "Overheidsorganisaties en leveranciers",
+        company: "Project Notificatieservices",
       }
     ],
   github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/",
