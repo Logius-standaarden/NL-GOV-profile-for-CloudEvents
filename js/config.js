@@ -17,7 +17,7 @@ var respecConfig = {
   // BP: "Best Practice"
   specType: "HR",
   pubDomain: "notificatieservices",
-  shortname: "NL-CloudEvents",
+  shortname: "CloudEvents-NL",
   // A YYYY-MM-DD date. The publication date of the present document.
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
   // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
