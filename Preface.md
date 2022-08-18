@@ -13,7 +13,7 @@ We have added a number of [Use Cases](#usecases) to illustrate the specific usag
 
 ### Usecases
  <figure id='authorization_code'>
-	<img src='media/use-case-pubsub1.png' width="600" />
+	<img alt="Pubsub image" src='media/use-case-pubsub1.png' width="600" />
 	<figcaption>Publish-subscribe pattern</figcaption>
  </figure>
 

@@ -2,20 +2,15 @@ var respecConfig = {
   specStatus: "ED",
   specType: "HR",
   pubDomain: "etc",
-  publishDate: "2021-12-07",
+  publishDate: "2022-07-05",
   editors: [
-    {
-      name: "Gershon Jansen",
-      company: "VNG Realisatie",
-      companyURL: "https://www.vngrealisatie.nl/",
-    },
     {
       name: "Ad Gerrits",
       company: "VNG Realisatie",
       companyURL: "https://www.vngrealisatie.nl/",
     },],
   shortName: "NL GOV profile for CloudEvents",
-  subtitle: "Werkversie",
+  subtitle: "Project Notificatieservices",
   github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents",
   issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues/",
   localBiblio: {

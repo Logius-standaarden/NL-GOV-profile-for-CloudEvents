@@ -1,5 +1,7 @@
 # Gedrachtscode voor bijdragen
 
+**Het project Notificatieservices is per 30 juni 2022 beeindigd. Over doorontwikkeling en beheer van het 'NL GOV profile for CloudEvents' worden gesprekken gevoerd maar zijn nog geen defintieve beslissingen genomen.** 
+
 ## Onze belofte
 
 We streven naar het open samenwerken en ontwikkelen van het NL GOV profile for CloudEvents. 

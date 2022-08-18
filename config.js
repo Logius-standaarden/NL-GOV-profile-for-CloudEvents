@@ -23,8 +23,8 @@ var respecConfig =
   //geeft probleem in header als gevuld previousPublishDate: "2021-12-07",
 
   //publishVersion niet zichtbaar nu
-  //publishVersion: "v0.2",
-  //previousPublishVersion: "0.1",
+  //publishVersion: "v0.3",
+  //previousPublishVersion: "0.2.1",
 
   //previousMaturity: "GN-CV",
   editors:
@@ -38,19 +38,9 @@ var respecConfig =
   authors:
     [
       {
-        name: "Gershon Jansen",
-        company: "VNG Realisatie",
-        companyURL: "http://www.vngrealisatie.nl/",
-      },
-      {
         name: "Werkgroep Berichtenstandaard",
-        company: "Overheidsorganisaties en leveranciers",
-      },
-      {
-        name: "Ad Gerrits",
-        company: "VNG Realisatie",
-        companyURL: "http://www.vngrealisatie.nl/",
-      }      
+        company: "Project Notificatieservices",
+      }
     ],
   github: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/",
   issueBase: "https://github.com/VNG-Realisatie/NL-GOV-profile-for-CloudEvents/issues",
@@ -72,7 +62,7 @@ var respecConfig =
   // nl_organisationName is used for some company specific values in the header (and Sotd)
   // currently supported: Logius and Geonovum (default)  
   // ### was Logius
-  nl_organisationName: "VNG Realisatie",
+  nl_organisationName: "Ministerie van BZK",
 
   // prefix for the names of company specific css, svg and ico prefixes
   // defaults to "GN-"  
@@ -98,11 +88,11 @@ var respecConfig =
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
   nl_logo: {
     src: "https://www.vngrealisatie.nl/themes/custom/tagordo/dist/images/Logo.svg",
-    alt: "VNG Realisatie",
-    id: "VNG Realisatie",
+    alt: "Ministerie van BZK",
+    id: "Ministerie van BZK",
     height: 77,
     width: 44,
-    url: "https://www.vngrealisatie.nl",
+    url: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
   },
   localBiblio: {
     "CloudEvents": {
