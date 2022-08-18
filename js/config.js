@@ -68,7 +68,7 @@ var respecConfig = {
   alternateFormats: [
     {
       label: "pdf",
-      uri: "NL-CloudEvents.pdf",
+      uri: "CloudEvents-NL.pdf",
     },
     ],
 
