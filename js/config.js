@@ -16,7 +16,7 @@ var respecConfig = {
   // BD: "Beheerdocumentatie"
   // BP: "Best Practice"
   specType: "HR",
-  pubDomain: "notificaties",
+  pubDomain: "notificatieservices",
   shortname: "NL-CloudEvents",
   // A YYYY-MM-DD date. The publication date of the present document.
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -29,21 +29,30 @@ var respecConfig = {
 
   editors: [
     {
+      name: "Gershon Jansen",
+      company: "VNG Realisatie",
+      companyURL: "https://www.vngrealisatie.nl/",
+    },
+    {
       name: "Ad Gerrits",
       company: "VNG Realisatie",
       companyURL: "https://www.vngrealisatie.nl/",
-    },{
+    },
+    {
       name: "Edwin Wisse",
       url: "https://logius.nl/standaarden",
       company: "Logius",
-    },],
-
-  authors: [{
-    name: "VNG",
-    url: "https://vng.nl/",
-    mailto: "api@logius.nl",
-  }
+    },
   ],
+
+  authors:
+  [
+    {
+      name: "Werkgroep Berichtenstandaard",
+      company: "Project Notificatieservices",
+    }
+  ],
+
   subtitle: "Project Notificatieservices",
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",
   issueBase: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/issues/",
