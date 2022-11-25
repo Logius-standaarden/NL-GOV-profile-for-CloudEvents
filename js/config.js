@@ -22,8 +22,8 @@ var respecConfig = {
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
   // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
   publishDate: "2022-07-05",
-  publishVersion: "1.0",
-  previousPublishVersion: "0.3",
+  publishVersion: "0.3",
+  // previousPublishVersion: "0.3",
   // license can be one of the following: cc0, cc-by or cc-by-nd((default)) (see https://github.com/Geonovum/respec/wiki/license )
   license: 'cc-by-nd',
 
@@ -88,16 +88,16 @@ var respecConfig = {
   nl_markdownEmbedImageInFigure: true,
   // this url points to the folder where organsation specific css files are stored
   // defaults to https://tools.geostandaarden.nl/respec/style/ if not set
-  nl_organisationStylesURL: "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
+  nl_organisationStylesURL: "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
   // nl_organisationStylesURL: "http://localhost:8081/respec/style/",
   // nl_organisationPublishURL points to organisation specifica publication page, used in header
   // defaults to  https://docs.geostandaarden.nl/"
-  nl_organisationPublishURL: "https://publicatie.centrumvoorstandaarden.nl/",
+  nl_organisationPublishURL: "https://gitdocumentatie.logius.nl/publicatie/",
 
   // nl_logo refers to company logo
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
   nl_logo: {
-    src: "https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
+    src: "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
     alt: "Logius",
     id: "Logius",
     height: 77,
