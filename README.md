@@ -16,4 +16,4 @@ Naast het profiel zijn ook een drietal handreikingen gemaakt die toelichten hoe 
 
 Deze handreikingen verwijzen naar door de Serverless Working Group ontwikkelde specificaties. Doel daarvan is om verdergaande standaardisatie te bewerkstelligen en interoperabiliteit te vergroten. Uw feedback op deze handreikingen is uiteraard ook welkom.
 
-Tijdens uitvoering van het project Notificatieservices was de beheerder van deze repository Ad Gerrits (VNG): ad.gerrits@vng.nl Voor eventuele vragen of opmerkingen kunt u met hem contact opnemen.
+Tijdens uitvoering van het project Notificatieservices was de beheerder van deze repository Ad Gerrits (VNG): ad.gerrits@vng.nl 
