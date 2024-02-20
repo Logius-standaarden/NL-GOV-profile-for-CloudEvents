@@ -10,10 +10,10 @@ In 2021 is samen met een community van overheidsorganiaties en leveranciers de e
 
 Naast het profiel zijn ook een drietal handreikingen gemaakt die toelichten hoe het NL GOV profiel is toe te passen bij gebruik van het:
 
-- [JSON gegevensformaat](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-JSON.md)
-- [HTTP transportprotocol](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-HTTP.md)
-- [Webhook interactiepatroon](https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/blob/main/NL-GOV-Guideline-for-CloudEvents-Webhook.md).
+- [JSON gegevensformaat](https://github.com/Logius-standaarden/CloudEvents-NL-Guidelines/blob/develop//NL-GOV-Guideline-for-CloudEvents-JSON.md)
+- [HTTP transportprotocol](https://github.com/Logius-standaarden/CloudEvents-NL-Guidelines/blob/develop/NL-GOV-Guideline-for-CloudEvents-HTTP.md)
+- [Webhook interactiepatroon](https://github.com/Logius-standaarden/CloudEvents-NL-Guidelines/blob/develop//NL-GOV-Guideline-for-CloudEvents-Webhook.md).
 
 Deze handreikingen verwijzen naar door de Serverless Working Group ontwikkelde specificaties. Doel daarvan is om verdergaande standaardisatie te bewerkstelligen en interoperabiliteit te vergroten. Uw feedback op deze handreikingen is uiteraard ook welkom.
 
-Tijdens uitvoering van het project Notificatieservices was de beheerder van deze repository Ad Gerrits (VNG): ad.gerrits@vng.nl Voor eventuele vragen of opmerkingen kunt u met hem contact opnemen.
+Tijdens uitvoering van het project Notificatieservices was de beheerder van deze repository Ad Gerrits (VNG): ad.gerrits@vng.nl 
