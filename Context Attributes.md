@@ -353,7 +353,7 @@ To be determined partly on the basis of future agreements about subscription and
 Example:
   - `source`: urn:nld:oin:00000001823288444000:systeem:BRP-component 
   - `type`: nl.brp.persoon-gehuwd
-  - `subject`: 123456789 (citizen service number)
+  - `subject`: 999990342 (citizen service number)
 
 #### time
 
