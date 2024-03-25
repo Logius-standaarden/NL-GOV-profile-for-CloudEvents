@@ -1,4 +1,4 @@
-## Event Data
+# Event Data
 
 As defined by the term [Data](#data), CloudEvents MAY include domain-specific
 information about the occurrence. When present, this information will be

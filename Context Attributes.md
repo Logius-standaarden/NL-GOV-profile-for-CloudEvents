@@ -1,5 +1,5 @@
-## Context Attributes
-<!-- ### [3.](#rfc.section.3) [Authorization Server Profile](#ServerProfile) -->
+# Context Attributes
+<!-- ## [3.](#rfc.section.3) [Authorization Server Profile](#ServerProfile) -->
 
 Every CloudEvent conforming to this specification MUST include context
 attributes designated as REQUIRED, MAY include one or more OPTIONAL context
@@ -9,7 +9,7 @@ These attributes, while descriptive of the event, are designed such that they
 can be serialized independent of the event data. This allows for them to be
 inspected at the destination without having to deserialize the event data.
 
-### Attribute Naming Convention
+## Attribute Naming Convention
 
 The CloudEvents specifications define mappings to various protocols and
 encodings, and the accompanying CloudEvents SDK targets various runtimes and
@@ -24,7 +24,7 @@ CloudEvents attribute names MUST consist of lower-case letters ('a' to 'z') or
 digits ('0' to '9') from the ASCII character set. Attribute names SHOULD be
 descriptive and terse and SHOULD NOT exceed 20 characters in length.
 
-### Type System
+## Type System
 
 The following abstract data types are available for use in attributes. Each of
 these types MAY be represented differently by different event formats and in
@@ -90,11 +90,11 @@ and the event data will be serialized. For example, in the case of a JSON
 serialization, the context attributes and the event data might both appear
 within the same JSON object.
 
-### REQUIRED Attributes
+## REQUIRED Attributes
 
 The following attributes are REQUIRED to be present in all CloudEvents:
 
-#### id
+## id
 
 - Type: `String`
 - Description: Identifies the event. Producers MUST ensure that `source` + `id`
@@ -124,7 +124,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
     being able to uniquely identify the event.
  
-#### source
+## source
 
 - Type: `URI-reference`
 - Description: Identifies the context in which an event happened. Often this
@@ -180,7 +180,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
   Comment: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
 
-#### specversion
+## specversion
 
 - Type: `String`
 - Description: The version of the CloudEvents specification which the event
@@ -202,7 +202,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 
 - MUST be '1.0'
 
-#### type
+## type
 
 - Type: `String`
 - Description: This attribute contains a value describing the type of event
@@ -245,13 +245,13 @@ Examples:
 - nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
 - nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
 
-### OPTIONAL Attributes
+## OPTIONAL Attributes
 
 The following attributes are OPTIONAL to appear in CloudEvents. See the
 [Notational Conventions](#notational-conventions) section for more information
 on the definition of OPTIONAL.
 
-#### datacontenttype
+## datacontenttype
 
 - Type: `String` per [RFC 2046](https://tools.ietf.org/html/rfc2046)
 - Description: Content type of `data` value. This attribute enables `data` to
@@ -294,7 +294,7 @@ name JSON as the primary representation format for APIs. Because APIs play an
 important role in communicating events (eg when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
 
-#### dataschema
+## dataschema
 
 - Type: `URI`
 - Description: Identifies the schema that `data` adheres to. Incompatible
@@ -314,7 +314,7 @@ Constraints:
   over arbitrary CloudEvents with a data content type understood by that tooling 
   (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning))
 
-#### subject
+## subject
 
 - Type: `String`
 - Description: This describes the subject of the event in the context of the
@@ -355,7 +355,7 @@ Example:
   - `type`: nl.brp.persoon-gehuwd
   - `subject`: 999990342 (citizen service number)
 
-#### time
+## time
 
 - Type: `Timestamp`
 - Description: Timestamp of when the occurrence happened. If the time of the
@@ -378,7 +378,7 @@ Example:
 - If the time when an event occurred in reality is needed for things like 
   routing or filtering, it can be included as a context attribute by the producer.
 
-### Extension Context Attributes
+## Extension Context Attributes
 
 A CloudEvent MAY include any number of additional context attributes with
 distinct names, known as "extension attributes". Extension attributes MUST
@@ -394,7 +394,7 @@ interact with non-CloudEvents systems that also process the message. Extension
 specifications that do this SHOULD specify how receivers are to interpret
 messages if the copied values differ from the cloud-event serialized values.
 
-#### Defining Extensions
+## Defining Extensions
 
 See [CloudEvent Attributes Extensions](primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
@@ -433,7 +433,7 @@ events.
   properly serialized and transported (e.g. when using HTTP-headers most HTTP 
   servers will reject requests with excessive HTTP header data).
   
-#### dataref
+## dataref
 
 - Type: `URI-reference`
 - Description: A reference to a location where the event payload is stored. The
@@ -487,15 +487,15 @@ both `data` and `dataref` (serialized as JSON):
   aspect may deserve attention because changes may occur in the period that consumers
   are notified and the time of requesting additional information).
 
-#### Sequence
+## Sequence
 
 This extension defines two attributes that can be included within a CloudEvent to describe the position of an event in the ordered sequence of events produced by a unique event source.
 The `sequence` attribute represents the value of this event's order in the stream of events. The exact value and meaning of this attribute is defined by the `sequencetype` attribute. If the `sequencetype` is missing, or not defined in this specification, event consumers will need to have some out-of-band communication with the event producer to understand how to interpret the value
 of the attribute.
 
-## Attributes
+# Attributes
 
-### sequence
+## sequence
 
 - Type: `String`
 - Description: Value expressing the relative order of the event. This enables
@@ -505,7 +505,7 @@ of the attribute.
   - MUST be a non-empty lexicographically-orderable string
   - RECOMMENDED as monotonically increasing and contiguous
 
-### sequencetype
+## sequencetype
 
 - Type: `String`
 - Description: Specifies the semantics of the sequence attribute. See the
@@ -514,12 +514,12 @@ of the attribute.
   - OPTIONAL
   - If present, MUST be a non-empty string
 
-## SequenceType Values
+# SequenceType Values
 
 This specification defines the following values for `sequencetype`. Additional
 values MAY be defined by other specifications.
 
-### Integer
+## Integer
 
 If the `sequencetype` is set to `Integer`, the `sequence` attribute has the
 following semantics:

@@ -1,4 +1,4 @@
-## Example
+# Example
 
 The following example shows a CloudEvent serialized as JSON:
 
