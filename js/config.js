@@ -29,11 +29,14 @@ var respecConfig = {
   maxTocLevel: 3,
   nl_markdownCodeClass: "code",
   nl_markdownTableClass: "dkkvs",
+  previousMaturity: "WV",
+  previousPublishDate: "2022-07-05",
+  previousPublishVersion: "0.2",
   pubDomain: "notificatieservices",
-  publishDate: "2022-07-05",
-  publishVersion: "0.3",
+  publishDate: "2024-06-06",
+  publishVersion: "0.31",
   shortName: "CloudEvents-NL",
   specStatus: "WV",
   specType: "ST",
-  subtitle: "Project Notificatieservices"
+  subtitle: "Notificatieservices"
 };
