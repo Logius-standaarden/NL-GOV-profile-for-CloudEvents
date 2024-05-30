@@ -1,4 +1,11 @@
 # NL GOV profile for CloudEvents
+De gepubliceerde (kandidaat vastgestelde) versie staat online:
+- [Gepubliceerde versie](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament)
+
+De ontwikkelversies van dit document staan online:
+- [Dynamische pagina (actueel)](https://Logius-standaarden.github.io/BOMOS-Fundament/index.html)
+- [Statische pagina (laatste build)](https://Logius-standaarden.github.io/BOMOS-Fundament/snapshot.html)
+- [PDF versie](https://logius-standaarden.github.io/BOMOS-Fundament/BOMOS-Fundament.pdf)
 
 Het NL GOV profile for CloudEvents is een specificatie voor het gestandaardiseerd
 beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties.
