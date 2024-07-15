@@ -36,7 +36,7 @@ var respecConfig = {
   publishDate: "2024-06-27",
   publishVersion: "1.0",
   shortName: "CloudEvents-NL",
-  specStatus: "WV",
+  specStatus: "DEF",
   specType: "ST",
   subtitle: "Notificatieservices"
 };
