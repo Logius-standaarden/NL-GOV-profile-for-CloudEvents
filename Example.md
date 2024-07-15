@@ -47,20 +47,20 @@ For more information about a particular attribute, see the detailed attribute de
 ```
 
 | Attribute | Explanation |
-| :------------- | :---------- | 
-|   &nbsp; specversion | Always '1.0' |
-|   &nbsp; type | Reverse DNS notation |
-|   &nbsp; source | Urn notation with 'nld' namespace identifier |
-|   &nbsp; subject | BSN as example; yet to be seen if and how attribute 'subject' will be used |
-|   &nbsp; id | Uuid (unique)|
-|   &nbsp; time | Time when event was recorded |
-|   &nbsp; nlbrpnationaliteit | Extension attribute with a BRP-domain specific meaning |
-|   &nbsp; geheimnummer | Extension attribute, to be treated as the equivalent of unset or omitted |
-|   &nbsp; dataref  | Extension attribute with a reference to where to get additional information |
-|   &nbsp; sequence | Extension attribute with an event tracking number |
-|   &nbsp; sequencetype | Extension attribut with indication of the type of sequence used |
-|   &nbsp; datacontenttype  | Indication of content type in attribute 'data' |
-|   &nbsp; data | Content information for consumer ('payload') |
+| ------------- | ---------- | 
+|   specversion | Always '1.0' |
+|   type | Reverse DNS notation |
+|   source | Urn notation with 'nld' namespace identifier |
+|   subject | BSN as example; yet to be seen if and how attribute 'subject' will be used |
+|   id | Uuid (unique)|
+|   time | Time when event was recorded |
+|   nlbrpnationaliteit | Extension attribute with a BRP-domain specific meaning |
+|   geheimnummer | Extension attribute, to be treated as the equivalent of unset or omitted |
+|   dataref  | Extension attribute with a reference to where to get additional information |
+|   sequence | Extension attribute with an event tracking number |
+|   sequencetype | Extension attribut with indication of the type of sequence used |
+|   datacontenttype  | Indication of content type in attribute 'data' |
+|   data | Content information for consumer ('payload') |
 
 Attribute names meet the CloudEvents specification requirements:
   - MUST consist of lower-case letters ('a' to 'z') or digits ('0' to '9') from the ASCII character set. 

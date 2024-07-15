@@ -79,7 +79,7 @@ information.
 #### Event Format
 
 An Event Format specifies how to serialize a CloudEvent as a sequence of bytes.
-Stand-alone event formats, such as the [JSON format](https://github.com/cloudevents/spec/blob/v1.0.2/json-format.md), specify
+Stand-alone event formats, such as the [JSON format](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md), specify
 serialization independent of any protocol or storage medium. Protocol Bindings
 MAY define formats that are dependent on the protocol.
 

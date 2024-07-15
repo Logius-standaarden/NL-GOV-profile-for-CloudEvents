@@ -210,7 +210,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   routing, observability, policy enforcement, etc. The format of this is
   producer defined and might include information such as the version of the
   `type` - see
-  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - REQUIRED
@@ -257,12 +257,12 @@ on the definition of OPTIONAL.
 - Description: Content type of `data` value. This attribute enables `data` to
   carry any type of content, whereby format and encoding might differ from that
   of the chosen event format. For example, an event rendered using the
-  [JSON envelope](./https://github.com/cloudevents/spec/blob/v1.0.2/json-format.md#3-envelope) format might carry an XML payload
+  [JSON envelope](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#3-envelope) format might carry an XML payload
   in `data`, and the consumer is informed by this attribute being set to
   "application/xml". The rules for how `data` content is rendered for different
   `datacontenttype` values are defined in the event format specifications; for
   example, the JSON event format defines the relationship in
-  [section 3.1](./https://github.com/cloudevents/spec/blob/v1.0.2/json-format.md#31-handling-of-data).
+  [section 3.1](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#31-handling-of-data).
 
   For some binary mode protocol bindings, this field is directly mapped to the
   respective protocol's content-type metadata property. Normative rules for the
@@ -299,20 +299,20 @@ preferred to use for payload data).
 - Type: `URI`
 - Description: Identifies the schema that `data` adheres to. Incompatible
   changes to the schema SHOULD be reflected by a different URI. See
-  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - OPTIONAL
   - If present, MUST be a non-empty URI
 
-**CloudEvents-NL**
+### CloudEvents-NL
 
 Constraints:
 - It SHOULD be prevented that different schedules arise for the same data.
 - The dataschema attribute is expected to be informational, largely to be used 
   during development and by tooling that is able to provide diagnostic information 
   over arbitrary CloudEvents with a data content type understood by that tooling 
-  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning))
+  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
 
 ## subject
 
@@ -341,8 +341,8 @@ Constraints:
     created" event, and the `id` uniquely identifies the event instance to
     distinguish separate occurrences of a same-named blob having been created;
     the name of the newly created blob is carried in `subject`:
-    - `source`: https://example.com/storage/tenant/container
-    - `subject`: mynewfile.jpg
+    - `source: https://example.com/storage/tenant/container`
+    - `subject: mynewfile.jpg`
 
 **CloudEvents-NL**
 
@@ -351,9 +351,9 @@ Constraints:
 To be determined partly on the basis of future agreements about subscription and filtering.
 
 Example:
-  - `source`: urn:nld:oin:00000001823288444000:systeem:BRP-component 
-  - `type`: nl.brp.persoon-gehuwd
-  - `subject`: 999990342 (citizen service number)
+  - `source: urn:nld:oin:00000001823288444000:systeem:BRP-component`
+  - `type: nl.brp.persoon-gehuwd`
+  - `subject: 999990342` (citizen service number)
 
 ## time
 
@@ -396,14 +396,14 @@ messages if the copied values differ from the cloud-event serialized values.
 
 ## Defining Extensions
 
-See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#cloudevent-attribute-extensions)
+See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
 
 The definition of an extension SHOULD fully define all aspects of the
 attribute - e.g. its name, type, semantic meaning and possible values. New
 extension definitions SHOULD use a name that is descriptive enough to reduce the
 chances of name collisions with other extensions. In particular, extension
-authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/documented-extensions.md)
+authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.1/documented-extensions.md)
 document for the set of known extensions - not just for possible name conflicts
 but for extensions that might be of interest.
 
