@@ -25,10 +25,6 @@ var respecConfig = {
       }
     ],
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",
-  issueBase: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/issues/",
-  maxTocLevel: 3,
-  nl_markdownCodeClass: "code",
-  nl_markdownTableClass: "dkkvs",
   previousMaturity: "WV",
   pubDomain: "notificatieservices",
   previousPublishDate: "2024-06-06",
