@@ -1,5 +1,4 @@
-## Overview
-<!-- ### [1.](#rfc.section.1) [Introduction](#Introduction) -->
+# Overview
 
 Events are everywhere. However, event producers tend to describe events
 differently.

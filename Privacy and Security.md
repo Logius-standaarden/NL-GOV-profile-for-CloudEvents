@@ -1,4 +1,4 @@
-## Advanced CloudEvents Security Options
+# Advanced CloudEvents Security Options
 
 Interoperability is the primary driver behind this specification, enabling such
 behavior requires some information to be made available _in the clear_ resulting

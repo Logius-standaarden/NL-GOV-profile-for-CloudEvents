@@ -1,4 +1,4 @@
-## Size Limits
+# Size Limits
 
 In many scenarios, CloudEvents will be forwarded through one or more generic
 intermediaries, each of which might impose limits on the size of forwarded

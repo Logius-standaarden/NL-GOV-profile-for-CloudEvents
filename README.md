@@ -1,4 +1,11 @@
 # NL GOV profile for CloudEvents
+De gepubliceerde (kandidaat vastgestelde) versie staat online:
+- [Gepubliceerde versie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/CloudEvents-NL)
+
+De ontwikkelversies van dit document staan online:
+- [Dynamische pagina (actueel)](https://Logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/index.html)
+- [Statische pagina (laatste build)](https://Logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/snapshot.html)
+- [PDF versie](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/CloudEvents-NL.pdf)
 
 Het NL GOV profile for CloudEvents is een specificatie voor het gestandaardiseerd
 beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties.
