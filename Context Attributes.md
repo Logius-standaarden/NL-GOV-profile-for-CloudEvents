@@ -94,7 +94,7 @@ within the same JSON object.
 
 The following attributes are REQUIRED to be present in all CloudEvents:
 
-## id
+### id
 
 - Type: `String`
 - Description: Identifies the event. Producers MUST ensure that `source` + `id`
@@ -109,7 +109,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - An ID  counter maintained by the producer
   - A UUID
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - Constraints:
   - If an ID is available that can durable identify the event, producers SHOULD 
@@ -124,7 +124,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
     being able to uniquely identify the event.
  
-## source
+### source
 
 - Type: `URI-reference`
 - Description: Identifies the context in which an event happened. Often this
@@ -158,7 +158,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - /sensors/tn-1234567/alerts
     - 1-555-123-4567
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - Constraints:
   - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
@@ -168,7 +168,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - involved organizations SHOULD agree on how organizations and systems are uniquely identified (e.g. via the use of OIN, KVK-nummer or for organization identification);
     - In line with [API Designrules identification ](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-ext-20211013/#identification):
       - SHOULD use the "[organisatie-identificatienummer](https://www.logius.nl/diensten/oin)" (OIN) for identifying Dutch government organizations
-      - SHOULD use the [KvK-nummer](https://www.kvk.nl/informatiebank/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
+      - SHOULD use the [KvK-nummer](https://www.kvk.nl/starten/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
       - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
   national, European or worldwide)
     - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain specific to more general).
@@ -180,7 +180,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
   Comment: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
 
-## specversion
+### specversion
 
 - Type: `String`
 - Description: The version of the CloudEvents specification which the event
@@ -198,11 +198,11 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - REQUIRED
   - MUST be a non-empty string
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - MUST be '1.0'
 
-## type
+### type
 
 - Type: `String`
 - Description: This attribute contains a value describing the type of event
@@ -210,7 +210,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   routing, observability, policy enforcement, etc. The format of this is
   producer defined and might include information such as the version of the
   `type` - see
-  [Versioning of CloudEvents in the Primer](primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - REQUIRED
@@ -221,7 +221,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - com.github.pull_request.opened
   - com.example.object.deleted.v2
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 Constraints:
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
@@ -251,18 +251,18 @@ The following attributes are OPTIONAL to appear in CloudEvents. See the
 [Notational Conventions](#notational-conventions) section for more information
 on the definition of OPTIONAL.
 
-## datacontenttype
+### datacontenttype
 
 - Type: `String` per [RFC 2046](https://tools.ietf.org/html/rfc2046)
 - Description: Content type of `data` value. This attribute enables `data` to
   carry any type of content, whereby format and encoding might differ from that
   of the chosen event format. For example, an event rendered using the
-  [JSON envelope](./json-format.md#3-envelope) format might carry an XML payload
+  [JSON envelope](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#3-envelope) format might carry an XML payload
   in `data`, and the consumer is informed by this attribute being set to
   "application/xml". The rules for how `data` content is rendered for different
   `datacontenttype` values are defined in the event format specifications; for
   example, the JSON event format defines the relationship in
-  [section 3.1](./json-format.md#31-handling-of-data).
+  [section 3.1](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#31-handling-of-data).
 
   For some binary mode protocol bindings, this field is directly mapped to the
   respective protocol's content-type metadata property. Normative rules for the
@@ -286,7 +286,7 @@ on the definition of OPTIONAL.
 - For Media Type examples see
   [IANA Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 Constraints:
 - JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API-Design Rules Extensions in development. Part of this is the intention to
@@ -294,27 +294,27 @@ name JSON as the primary representation format for APIs. Because APIs play an
 important role in communicating events (eg when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
 
-## dataschema
+### dataschema
 
 - Type: `URI`
 - Description: Identifies the schema that `data` adheres to. Incompatible
   changes to the schema SHOULD be reflected by a different URI. See
-  [Versioning of CloudEvents in the Primer](primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - OPTIONAL
   - If present, MUST be a non-empty URI
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 Constraints:
 - It SHOULD be prevented that different schedules arise for the same data.
 - The dataschema attribute is expected to be informational, largely to be used 
   during development and by tooling that is able to provide diagnostic information 
   over arbitrary CloudEvents with a data content type understood by that tooling 
-  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning))
+  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
 
-## subject
+### subject
 
 - Type: `String`
 - Description: This describes the subject of the event in the context of the
@@ -341,21 +341,21 @@ Constraints:
     created" event, and the `id` uniquely identifies the event instance to
     distinguish separate occurrences of a same-named blob having been created;
     the name of the newly created blob is carried in `subject`:
-    - `source`: https://example.com/storage/tenant/container
-    - `subject`: mynewfile.jpg
+    - `source: https://example.com/storage/tenant/container`
+    - `subject: mynewfile.jpg`
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 Constraints:
 - Decision on whether or not to use the attribute and/or the exact interpretation is postponed. 
 To be determined partly on the basis of future agreements about subscription and filtering.
 
 Example:
-  - `source`: urn:nld:oin:00000001823288444000:systeem:BRP-component 
-  - `type`: nl.brp.persoon-gehuwd
-  - `subject`: 999990342 (citizen service number)
+  - `source: urn:nld:oin:00000001823288444000:systeem:BRP-component`
+  - `type: nl.brp.persoon-gehuwd`
+  - `subject: 999990342` (citizen service number)
 
-## time
+### time
 
 - Type: `Timestamp`
 - Description: Timestamp of when the occurrence happened. If the time of the
@@ -369,7 +369,7 @@ Example:
   - If present, MUST adhere to the format specified in
     [RFC 3339](https://tools.ietf.org/html/rfc3339)
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 - The time the event was logged SHOULD be used (in many cases this is the only 
   time that can be determined unambiguously).
 - The exact meaning of `time` MUST be clearly documented.
@@ -378,7 +378,7 @@ Example:
 - If the time when an event occurred in reality is needed for things like 
   routing or filtering, it can be included as a context attribute by the producer.
 
-## Extension Context Attributes
+### Extension Context Attributes
 
 A CloudEvent MAY include any number of additional context attributes with
 distinct names, known as "extension attributes". Extension attributes MUST
@@ -394,16 +394,16 @@ interact with non-CloudEvents systems that also process the message. Extension
 specifications that do this SHOULD specify how receivers are to interpret
 messages if the copied values differ from the cloud-event serialized values.
 
-## Defining Extensions
+### Defining Extensions
 
-See [CloudEvent Attributes Extensions](primer.md#cloudevent-attribute-extensions)
+See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
 
 The definition of an extension SHOULD fully define all aspects of the
 attribute - e.g. its name, type, semantic meaning and possible values. New
 extension definitions SHOULD use a name that is descriptive enough to reduce the
 chances of name collisions with other extensions. In particular, extension
-authors SHOULD check the [documented extensions](documented-extensions.md)
+authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.1/documented-extensions.md)
 document for the set of known extensions - not just for possible name conflicts
 but for extensions that might be of interest.
 
@@ -424,7 +424,7 @@ without needing to decode and examine the event data. Such identity attributes
 can also be used to help intermediate gateways determine how to route the
 events.
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - Two of the extension attributes included by CloudEvents ('dataref' and 
   'sequence') are included as optional attributes in the CloudEvents-NL profile 
@@ -433,7 +433,7 @@ events.
   properly serialized and transported (e.g. when using HTTP-headers most HTTP 
   servers will reject requests with excessive HTTP header data).
   
-## dataref
+### dataref
 
 - Type: `URI-reference`
 - Description: A reference to a location where the event payload is stored. The
@@ -443,13 +443,13 @@ events.
   Known as the "Claim Check Pattern", this attribute MAY be used for a variety
   of purposes, including:
 
-  - If the [Data](../spec.md#data) is too large to be included in the message,
+  - If the [Data](#data) is too large to be included in the message,
     the `data` is not present, and the consumer can retrieve it using
     this attribute.
-  - If the consumer wants to verify that the [Data](../spec.md#data) has not
+  - If the consumer wants to verify that the [Data](#data) has not
     been tampered with, it can retrieve it from a trusted source using this
     attribute.
-  - If the [Data](../spec.md#data) MUST only be viewed by trusted consumers
+  - If the [Data](#data) MUST only be viewed by trusted consumers
     (e.g. personally identifiable information), only a trusted consumer can
     retrieve it using this attribute and a pre-shared secret.
 
@@ -460,7 +460,7 @@ events.
 - Constraints:
   - OPTIONAL
 
-# Example
+#### Example
 
 The following example shows a CloudEvent in which the event producer has included
 both `data` and `dataref` (serialized as JSON):
@@ -477,7 +477,7 @@ both `data` and `dataref` (serialized as JSON):
 }
 ```
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - MAY be used to reference an external data location (for example: a link back to 
   the producer of the event that can be queried for more information about the event).
@@ -493,9 +493,9 @@ This extension defines two attributes that can be included within a CloudEvent t
 The `sequence` attribute represents the value of this event's order in the stream of events. The exact value and meaning of this attribute is defined by the `sequencetype` attribute. If the `sequencetype` is missing, or not defined in this specification, event consumers will need to have some out-of-band communication with the event producer to understand how to interpret the value
 of the attribute.
 
-# Attributes
+### Attributes
 
-## sequence
+#### sequence
 
 - Type: `String`
 - Description: Value expressing the relative order of the event. This enables
@@ -505,7 +505,7 @@ of the attribute.
   - MUST be a non-empty lexicographically-orderable string
   - RECOMMENDED as monotonically increasing and contiguous
 
-## sequencetype
+#### sequencetype
 
 - Type: `String`
 - Description: Specifies the semantics of the sequence attribute. See the
@@ -514,12 +514,12 @@ of the attribute.
   - OPTIONAL
   - If present, MUST be a non-empty string
 
-# SequenceType Values
+##### SequenceType Values
 
 This specification defines the following values for `sequencetype`. Additional
 values MAY be defined by other specifications.
 
-## Integer
+##### Integer
 
 If the `sequencetype` is set to `Integer`, the `sequence` attribute has the
 following semantics:
@@ -530,7 +530,7 @@ following semantics:
 - The sequence wraps around from 2,147,483,647 (2^31 -1) to -2,147,483,648
   (-2^31).
 
-**CloudEvents-NL**
+#### CloudEvents-NL
 
 - Attribute 'sequence' can be helpful in situations where:
 -  a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers 
