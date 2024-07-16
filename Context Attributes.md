@@ -168,7 +168,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - involved organizations SHOULD agree on how organizations and systems are uniquely identified (e.g. via the use of OIN, KVK-nummer or for organization identification);
     - In line with [API Designrules identification ](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-ext-20211013/#identification):
       - SHOULD use the "[organisatie-identificatienummer](https://www.logius.nl/diensten/oin)" (OIN) for identifying Dutch government organizations
-      - SHOULD use the [KvK-nummer](https://www.kvk.nl/informatiebank/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
+      - SHOULD use the [KvK-nummer](https://www.kvk.nl/starten/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
       - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
   national, European or worldwide)
     - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain specific to more general).
