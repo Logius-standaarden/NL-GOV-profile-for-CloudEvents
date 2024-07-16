@@ -28,7 +28,7 @@ var respecConfig = {
   previousMaturity: "WV",
   pubDomain: "notificatieservices",
   previousPublishDate: "2024-06-06",
-  previousPublishVersion: "0.31",
+  previousPublishVersion: "0.3",
   publishDate: "2024-06-27",
   publishVersion: "1.0",
   shortName: "cloudevents-nl",
