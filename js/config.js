@@ -31,7 +31,7 @@ var respecConfig = {
   previousPublishVersion: "0.31",
   publishDate: "2024-06-27",
   publishVersion: "1.0",
-  shortName: "CloudEvents-NL",
+  shortName: "cloudevents-nl",
   specStatus: "WV",
   specType: "ST",
   subtitle: "Notificatieservices"
