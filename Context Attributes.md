@@ -197,9 +197,6 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - REQUIRED
   - MUST be a non-empty string
 
-#### CloudEvents-NL
-
-- MUST be '1.0'
 
 ### type
 
