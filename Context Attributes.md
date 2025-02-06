@@ -117,7 +117,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     about the event from the source.
   - If no ID is available that can persistently identify the event producers SHOULD use a random ID:
     - SHOULD use a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    - MUST describe the limitations (e.g., that it's just a random ID and has no relation to the occurrence event).
+    - MUST describe the limitations (e.g., that it's just a random ID and has no relation to the occurrence event) in the [[[#dataschema]]] attribute.
 - Examples:
   - 'doc2021033441' (ID of the document created as a result of an event that occurred).
   - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
