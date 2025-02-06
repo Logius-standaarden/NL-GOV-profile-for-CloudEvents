@@ -1,5 +1,3 @@
-Note: the format used is the format used by the Logius Centrum voor standaarden (e.g. [NL GOV Assurance profile for OAuth 2.0](https://publicatie.centrumvoorstandaarden.nl/api/oauth/)). This makes it easier for reviewers to assess things. The format may also be used to publish the profile in the future.
-
 ## Dutch government profile for CloudEvents 
 This profile is based upon the CloudEvents 1.0.1 specification [[CloudEvents]] as published by the [Serverless Working Group](https://github.com/cncf/wg-serverless) of the
  [Cloud Native Computing Foundation](https://www.cncf.io/).
