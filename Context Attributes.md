@@ -170,14 +170,14 @@ The following attributes are REQUIRED to be present in all CloudEvents:
       - SHOULD use the [KvK-nummer](https://www.kvk.nl/starten/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
       - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
   national, European or worldwide)
-    - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain specific to more general).
-  - SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
+    - SHOULD choose an abstraction level for the source that can be used sustainably; even if the initial scope expands (e.g., scope creep from domain specific to more general categorization).
+  - MUST NOT be used to reference an external data location (see [[[#dataref]]]).
 - Examples:
   - urn:nld:oin:00000001823288444000:systeem:BRP-component
   - urn:nld:kvknr:09220932.burgerzakensysteem
   - urn:nld:gemeente-nijmegen.burgerzakensysteem
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
-  Comment: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
+    **_Comment_**: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
 
 ### specversion
 
