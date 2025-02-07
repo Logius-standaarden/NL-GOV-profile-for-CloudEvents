@@ -109,7 +109,8 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - An ID  counter maintained by the producer
   - A UUID
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br>  
 
 - Constraints:
   - If an ID is available that can persistently identify the event, producers MUST 
@@ -122,6 +123,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - 'doc2021033441' (ID of the document created as a result of an event that occurred).
   - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
     being able to uniquely identify the event.
+</aside>
  
 ### source
 
@@ -157,7 +159,8 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - /sensors/tn-1234567/alerts
     - 1-555-123-4567
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br> 
 
 - Constraints:
   - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
@@ -178,6 +181,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - urn:nld:gemeente-nijmegen.burgerzakensysteem
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
     **_Comment_**: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
+</aside>
 
 ### specversion
 
@@ -216,7 +220,8 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - com.github.pull_request.opened
   - com.example.object.deleted.v2
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br> 
 
 Constraints:
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
@@ -239,6 +244,8 @@ Examples:
 - nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
 - nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
 - nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
+</aside>
+
 
 ## OPTIONAL Attributes
 
