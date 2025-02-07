@@ -22,6 +22,16 @@ var respecConfig = {
         "company" : "Logius",
         "name" : "Edwin Wisse",
         "url" : "https://logius.nl/standaarden"
+      },
+      { 
+        "company" : "Logius",
+        "name" : "Alexander Green",
+        "url" : "https://logius.nl/standaarden"
+      },
+      { 
+        "company" : "Logius",
+        "name" : "Stas Mironov",
+        "url" : "https://logius.nl/standaarden"
       }
     ],
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",

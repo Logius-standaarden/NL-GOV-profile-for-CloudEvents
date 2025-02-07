@@ -238,11 +238,7 @@ Constraints:
   - domain (for example: nl.natuurlijke-personen.persoon-verhuisd); for domain designation plural MUST be used.
   - law or rule (for example: nl.amsterdam.erfpacht.overdracht)
 - Names of organizations SHOULD NOT be used (because they are not time invariant).
-Examples:
-  - nl.vng.zgw.zaken.status.create or nl.overheid.zaken.zaakstatus-gewijzigd (context is relevant when defining type)
-  - nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
-  - nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
-  - nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
+
 </aside>
 
 
