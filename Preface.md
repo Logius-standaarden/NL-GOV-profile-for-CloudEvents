@@ -21,6 +21,4 @@ The basic pattern for use cases describes a (public/governmental) application in
 
 Within this context, it concerns standardization of the automated exchange of event information via applications. In practice, agreements at business level are often also required between the parties involved. 
 
-A number of [use cases](use-cases) have been described that clarify the use of the GOV NL profile.
-
-
+<!-- ⚠️ *TODO* A number of [use cases](use-cases) have been described that clarify the use of the GOV NL profile. -->
