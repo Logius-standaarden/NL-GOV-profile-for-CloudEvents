@@ -7,7 +7,8 @@ The goal of the CloudEvents specification is to define interoperability of event
 
 The CloudEvents standard is based on the principle of not imposing more requirements on the parties involved than necessary. This means, among other things, that there are no requirements for how consumers should interpret and process received notifications. Constraints pertaining to consumers are therefore more often formulated with 'MAY' than with 'SHOULD' or 'MUST' (e.g. "Consumers MAY assume that Events with identical `source` and `id` are duplicates")) The GOV NL profile endorses this principle. In practice, the parties involved are of course allowed to apply stricter constraints.
 
-We have added a number of [Use Cases](#usecases) to illustrate the specific usage the CloudEvents-NL profile is aimed at. Starting with chapter [Introduction](#introduction) we follow the structure of the CloudEvents profile. Where we do not use content from CloudEvents we use ~~strikethrough~~ to indicate it is not part of CloudEvents-NL. Where we have added more specific requirements for the Dutch situation this is indicated with the **CloudEvents-NL** tag.
+<!-- ⚠️ *TODO* We have added a number of [Use Cases](#usecases) to illustrate the specific usage the CloudEvents-NL profile is aimed at. -->
+Starting with chapter [Introduction](#introduction) we follow the structure of the CloudEvents profile. Where we do not use content from CloudEvents we use ~~strikethrough~~ to indicate it is not part of CloudEvents-NL. Where we have added more specific requirements for the Dutch situation this is indicated with the **CloudEvents-NL** tag.
 
 ### Usecases
  <figure id='authorization_code'>
