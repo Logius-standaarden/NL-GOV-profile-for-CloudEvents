@@ -225,25 +225,24 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 
 Constraints:
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
-- MAY be specified by adding as a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
-- Producers MUST facilitate consumers to request the exact meaning.
+- MAY be further specified by adding a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
+- Producers MUST facilitate consumers to request additional information on the type and adequatly explain the exact meaning.
 - SHOULD stay the same when a CloudEvent's data changes in a backwardly-compatible way.
 - SHOULD change when a CloudEvent's data changes in a backwardly-incompatible way.
 - The producer SHOULD produce both the old event and the new event for some time (potentially forever) in order to
  avoid disrupting consumers.
 - The producer decides if versioning is used.
-- If versioning is used [semantic versioning](https://semver.org/) SHOULD be used; a prefix of 'v' SHOULD be 
-  used to indicate it is a version number (e.g. 'v1.2.3')
+- If versioning is used, the type attribute MUST only include a single version numebr, prefixed by the letter `v`
 - In descending order of preference one SHOULD use the name of a:
   - data source (for example: 'nl.brp.persoon-verhuisd)
   - domain (for example: nl.natuurlijke-personen.persoon-verhuisd); for domain designation plural MUST be used.
   - law or rule (for example: nl.amsterdam.erfpacht.overdracht)
-- Names of organizations SHOULD NOT be used (because they are not durable).
+- Names of organizations SHOULD NOT be used (because they are not time invariant).
 Examples:
-- nl.vng.zgw.zaken.status.create or nl.overheid.zaken.zaakstatus-gewijzigd (context is relevant when defining type)
-- nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
-- nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
-- nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
+  - nl.vng.zgw.zaken.status.create or nl.overheid.zaken.zaakstatus-gewijzigd (context is relevant when defining type)
+  - nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
+  - nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
+  - nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
 </aside>
 
 
@@ -291,9 +290,9 @@ on the definition of OPTIONAL.
 #### CloudEvents-NL
 
 Constraints:
-- JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API-Design Rules Extensions in development. Part of this is the intention to
+- JSON-format SHOULD be used (see [[[ADR]]]. Part of this is the intention to
 name JSON as the primary representation format for APIs. Because APIs play an 
-important role in communicating events (eg when using the webhook pattern) the JSON format is 
+important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
 
 ### dataschema
