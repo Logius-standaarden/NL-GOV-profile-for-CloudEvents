@@ -286,7 +286,7 @@ on the definition of OPTIONAL.
 #### CloudEvents-NL
 
 Constraints:
-- JSON-format SHOULD be used (see [[[ADR]]]. Part of this is the intention to
+- JSON-format SHOULD be used (see [[[ADR]]]). Part of this is the intention to
 name JSON as the primary representation format for APIs. Because APIs play an 
 important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
