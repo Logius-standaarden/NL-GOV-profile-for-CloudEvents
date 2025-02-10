@@ -21,7 +21,7 @@ This specification defines the following terms:
 
 #### Data Schema
 
-The "dataschema" refers to the technical specification of the attributes in a given event. Currently the [v1.0.2 of CloudEvents](https://github.com/cloudevents/spec/tree/v1.0.2/cloudevents/formats) specifies various different formats for documenting the dataschema.
+The "dataschema" refers to the technical specification of the attributes in a given event. Currently [v1.0.2 of CloudEvents](https://github.com/cloudevents/spec/tree/v1.0.2/cloudevents/formats) specifies various different formats for documenting the dataschema.
 
 "Dataschema" attribute is expected to be informational, largely to be used during development and by tooling that is able to provide diagnostic information over arbitrary CloudEvents with a data content type understood by that tooling. For further specifications, see [[[#dataschema]]].
 ]
