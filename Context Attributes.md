@@ -232,7 +232,7 @@ Constraints:
 - The producer SHOULD produce both the old event and the new event for some time (potentially forever) in order to
  avoid disrupting consumers.
 - The producer decides if versioning is used.
-- If versioning is used, the type attribute MUST only include a single version numebr, prefixed by the letter `v`
+- If versioning is used, the type attribute MUST only include a single version number, prefixed by the letter `v`
 - In descending order of preference one SHOULD use the name of a:
   - data source (for example: 'nl.brp.persoon-verhuisd)
   - domain (for example: nl.natuurlijke-personen.persoon-verhuisd); for domain designation plural MUST be used.
