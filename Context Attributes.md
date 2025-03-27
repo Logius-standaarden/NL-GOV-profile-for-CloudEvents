@@ -109,20 +109,21 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - An ID  counter maintained by the producer
   - A UUID
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br>  
 
 - Constraints:
-  - If an ID is available that can durable identify the event, producers SHOULD 
-    use that ID. (for example so that consumers MAY use `id` to request information
-    about the event from the source).
-  - If no ID is available that can durable identify the event producers SHOULD use a random ID:
+  - If an ID is available that can persistently identify the event, producers MUST 
+    use that ID. For example so that consumers may use `id` to request information
+    about the event from the source.
+  - If no ID is available that can persistently identify the event producers SHOULD use a random ID:
     - SHOULD use a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    - MUST describe the limitations (eg that it's just a random ID and no identification
-      of the event occurred).
+    - MUST describe the limitations (e.g., that it's just a random ID and has no relation to the occurrence event) in the [[[#dataschema]]] attribute.
 - Examples:
   - 'doc2021033441' (ID of the document created as a result of an event that occurred).
   - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
     being able to uniquely identify the event.
+</aside>
  
 ### source
 
@@ -158,7 +159,8 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - /sensors/tn-1234567/alerts
     - 1-555-123-4567
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br> 
 
 - Constraints:
   - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
@@ -166,19 +168,20 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - the organization that publishes the event
     - the source system that publishes the event.
   - involved organizations SHOULD agree on how organizations and systems are uniquely identified (e.g. via the use of OIN, KVK-nummer or for organization identification);
-    - In line with [API Designrules identification ](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-ext-20211013/#identification):
-      - SHOULD use the "[organisatie-identificatienummer](https://www.logius.nl/diensten/oin)" (OIN) for identifying Dutch government organizations
+    - In line with [[[ADR]]]:
+      - SHOULD use the "[organisatie-identificatienummer](https://www.logius.nl/domeinen/toegang/organisatie-identificatienummer)" (OIN) for identifying Dutch government organizations
       - SHOULD use the [KvK-nummer](https://www.kvk.nl/starten/kvk-nummer-alles-wat-je-moet-weten/) for identifying Dutch non-government organizations (companies, associations, foundations etc...)
       - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
   national, European or worldwide)
-    - one SHOULD choose an abstraction level that can be used sustainably; even if the initial scope expands (e.g. from domain specific to more general).
-  - SHOULD NOT be used to reference an external data location (see extension attribute Dataref for that purpose).
+    - SHOULD choose an abstraction level for the source that can be used sustainably; even if the initial scope expands (e.g., scope creep from domain specific to more general categorization).
+  - MUST NOT be used to reference an external data location (see [[[#dataref]]]).
 - Examples:
   - urn:nld:oin:00000001823288444000:systeem:BRP-component
   - urn:nld:kvknr:09220932.burgerzakensysteem
   - urn:nld:gemeente-nijmegen.burgerzakensysteem
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
-  Comment: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
+    **_Comment_**: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
+</aside>
 
 ### specversion
 
@@ -197,10 +200,6 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Constraints:
   - REQUIRED
   - MUST be a non-empty string
-
-#### CloudEvents-NL
-
-- MUST be '1.0'
 
 ### type
 
@@ -221,29 +220,27 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - com.github.pull_request.opened
   - com.example.object.deleted.v2
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br> 
 
 Constraints:
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
-- MAY be specified by adding as a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
-- Producers MUST facilitate consumers to request the exact meaning.
+- MAY be further specified by adding a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
+- Producers MUST facilitate consumers to request additional information on the type and adequatly explain the exact meaning.
 - SHOULD stay the same when a CloudEvent's data changes in a backwardly-compatible way.
 - SHOULD change when a CloudEvent's data changes in a backwardly-incompatible way.
 - The producer SHOULD produce both the old event and the new event for some time (potentially forever) in order to
  avoid disrupting consumers.
 - The producer decides if versioning is used.
-- If versioning is used [semantic versioning](https://semver.org/) SHOULD be used; a prefix of 'v' SHOULD be 
-  used to indicate it is a version number (e.g. 'v1.2.3')
+- If versioning is used, the type attribute MUST only include a single version number, prefixed by the letter `v`
 - In descending order of preference one SHOULD use the name of a:
   - data source (for example: 'nl.brp.persoon-verhuisd)
   - domain (for example: nl.natuurlijke-personen.persoon-verhuisd); for domain designation plural MUST be used.
   - law or rule (for example: nl.amsterdam.erfpacht.overdracht)
-- Names of organizations SHOULD NOT be used (because they are not durable).
-Examples:
-- nl.vng.zgw.zaken.status.create or nl.overheid.zaken.zaakstatus-gewijzigd (context is relevant when defining type)
-- nl.brp.huwelijk-voltrokken or nl.brp.persoon-gehuwd (be specific because exact meaning can differ)
-- nl.vng.zgw.zaak-toegevoegd-aan-document or nl.vng.zgw.document-toegevoegd-aan-zaak (perspective is relevant) 
-- nl.brp.huwelijk-voltrokken.v0.1.0 (for initial development, anything may change)
+- Names of organizations SHOULD NOT be used (because they are not time invariant).
+
+</aside>
+
 
 ## OPTIONAL Attributes
 
@@ -289,9 +286,9 @@ on the definition of OPTIONAL.
 #### CloudEvents-NL
 
 Constraints:
-- JSON-format SHOULD be used (The [Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie/) knows API-Design Rules Extensions in development. Part of this is the intention to
+- JSON-format SHOULD be used (see [[[ADR]]]). Part of this is the intention to
 name JSON as the primary representation format for APIs. Because APIs play an 
-important role in communicating events (eg when using the webhook pattern) the JSON format is 
+important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
 preferred to use for payload data).
 
 ### dataschema
