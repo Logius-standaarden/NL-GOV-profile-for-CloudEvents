@@ -225,7 +225,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 
 Constraints:
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
-- MAY be further specified by adding a suffix (for example: nl.brp.verhuizing.binnengemeentelijk)
+- MAY be further specified by adding a suffix (for example: `nl.brp.verhuizing.binnengemeentelijk` instead of `nl.brp.binnengemeentelijke-verhuizing`)
 - Producers MUST facilitate consumers to request additional information on the type and adequatly explain the exact meaning.
 - SHOULD stay the same when a CloudEvent's data changes in a backwardly-compatible way.
 - SHOULD change when a CloudEvent's data changes in a backwardly-incompatible way.
