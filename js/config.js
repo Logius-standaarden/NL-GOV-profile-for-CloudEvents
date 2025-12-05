@@ -3,11 +3,12 @@ var respecConfig = {
         "label" : "pdf",
         "uri" : "CloudEvents-NL.pdf"
       } ],
-  authors: [ { 
-        "company" : "Project Notificatieservices",
-        "name" : "Werkgroep Berichtenstandaard"
-      } ],
-  editors: [ 
+  authors: [ 
+      { 
+        "company" : "VNG Realisatie",
+        "companyURL" : "https://www.vngrealisatie.nl/",
+        "name" : "Ad Gerrits"
+      },
       { 
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
@@ -16,11 +17,18 @@ var respecConfig = {
       { 
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
-        "name" : "Ad Gerrits"
+        "name" : "Jeanot Bijpost"
+      }
+           ],
+  editors: [ 
+      { 
+        "company" : "Logius",
+        "name" : "Alexander Green",
+        "url" : "https://logius.nl/standaarden"
       },
       { 
         "company" : "Logius",
-        "name" : "Edwin Wisse",
+        "name" : "Stas Mironov",
         "url" : "https://logius.nl/standaarden"
       }
     ],
