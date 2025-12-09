@@ -30,14 +30,13 @@ loadRespecWithConfiguration({
       }
   ],
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",
-  previousMaturity: "WV",
   pubDomain: "notificatieservices",
-  previousPublishDate: "2025-06-27",
-  previousPublishVersion: "0.3",
-  publishDate: "2025-10-10",
+  previousPublishDate: "2025-10-10",
+  previousPublishVersion: "1.0",
+  publishDate: "2025-12-10",
   publishVersion: "1.1",
   shortName: "CloudEvents-NL",
-  specStatus: "CV",
+  specStatus: "WV",
   specType: "ST",
   subtitle: "Notificatieservices"
 });
