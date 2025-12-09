@@ -35,7 +35,7 @@ loadRespecWithConfiguration({
   previousPublishVersion: "1.0",
   publishDate: "2025-12-10",
   publishVersion: "1.1",
-  shortName: "CloudEvents-NL",
+  shortName: "cloudEvents-nl",
   specStatus: "DEF",
   specType: "ST",
   subtitle: "Notificatieservices"
