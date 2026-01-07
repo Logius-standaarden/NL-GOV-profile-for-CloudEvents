@@ -1,5 +1,5 @@
 ## Dutch government profile for CloudEvents 
-This profile is based upon the CloudEvents 1.0.1 specification [[CloudEvents]] as published by the [Serverless Working Group](https://github.com/cncf/wg-serverless) of the
+This profile is based on [[[CloudEvents]]] as published by the [Serverless Working Group](https://github.com/cncf/wg-serverless) of the
  [Cloud Native Computing Foundation](https://www.cncf.io/).
 It should be considered a fork of this profile as the CloudEvents specification is geared more towards generic use and in the Netherlands we want to add a number of requirements for the Dutch situation with the goal to agree on how to use the CloudEvents specification.
 
