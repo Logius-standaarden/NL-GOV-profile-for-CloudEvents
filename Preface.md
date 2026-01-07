@@ -17,7 +17,7 @@ Starting with chapter [Introduction](#introduction) we follow the structure of t
  </figure>
 
 ### Introduction
-The basic pattern for use cases describes a (public/governmental) application in the role of '[producer](#producer)' publishes '[events](#event)': data records expressing an occurrence and its context. Published events can be consumed by applications in the role of '[consumer](#consumer)'. Consumers are subscribed to receiving certain types of events. There may or may not be one or more applications in the rol of '[intermediary](#intermediary)' that take care of routing events to consumers based on contextual information. The basic pattern used here is the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+The basic pattern for use cases describes a (public/governmental) application in the role of '[producer](#producer)' that publishes '[events](#event)': data records expressing an occurrence and its context. Published events can be consumed by applications in the role of '[consumer](#consumer)'. Consumers subscribe to certain types of events. There may be one or more applications in the role of '[intermediary](#intermediary)' that take care of routing events to consumers based on contextual information. The basic pattern used here is the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
 
 Within this context, it concerns standardization of the automated exchange of event information via applications. In practice, agreements at business level are often also required between the parties involved. 
 
