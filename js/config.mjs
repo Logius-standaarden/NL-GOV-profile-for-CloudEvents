@@ -33,10 +33,10 @@ loadRespecWithConfiguration({
   pubDomain: "notificatieservices",
   previousPublishDate: "2025-10-10",
   previousPublishVersion: "1.0",
-  publishDate: "2025-12-10",
+  publishDate: "2026-01-07",
   publishVersion: "1.1",
   shortName: "cloudevents-nl",
-  specStatus: "DEF",
+  specStatus: "VV",
   specType: "ST",
   subtitle: "Notificatieservices"
 });
