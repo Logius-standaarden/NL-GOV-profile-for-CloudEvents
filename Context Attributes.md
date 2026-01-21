@@ -31,13 +31,13 @@ these types MAY be represented differently by different event formats and in
 protocol metadata fields. This specification defines a canonical
 string-encoding for each type that MUST be supported by all implementations.
 
-- `Boolean` - a boolean value of "true" or "false".
+- `Boolean` - A boolean value of "true" or "false".
   - String encoding: a case-sensitive value of `true` or `false`.
 - `Integer` - A whole number in the range -2,147,483,648 to +2,147,483,647
   inclusive. This is the range of a signed, 32-bit, twos-complement encoding.
   Event formats do not have to use this encoding, but they MUST only use
   `Integer` values in this range.
-  - String encoding: Integer portion of the JSON Number per
+  - String encoding: Integer component of the JSON Number per
     [RFC 7159, Section 6](https://tools.ietf.org/html/rfc7159#section-6)
 - `String` - Sequence of allowable Unicode characters. The following characters
   are disallowed:
@@ -106,7 +106,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - MUST be a non-empty string
   - MUST be unique within the scope of the producer
 - Examples:
-  - An ID  counter maintained by the producer
+  - An event  counter maintained by the producer
   - A UUID
 
 <aside class=" addition">
@@ -150,14 +150,14 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - An absolute URI is RECOMMENDED
 - Examples
   - Internet-wide unique URI with a DNS authority.
-    - https://github.com/cloudevents
-    - mailto:cncf-wg-serverless@lists.cncf.io
+    - `https://github.com/cloudevents`
+    - `mailto:cncf-wg-serverless@lists.cncf.io`
   - Universally-unique URN with a UUID:
-    - urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66
+    - `urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66`
   - Application-specific identifiers
-    - /cloudevents/spec/pull/123
-    - /sensors/tn-1234567/alerts
-    - 1-555-123-4567
+    - `/cloudevents/spec/pull/123`
+    - `/sensors/tn-1234567/alerts`
+    - `1-555-123-4567`
 
 <aside class=" addition">
 <b>CloudEvents-NL: Additional content</b></br> 
