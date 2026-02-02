@@ -338,8 +338,8 @@ Constraints:
     created" event, and the `id` uniquely identifies the event instance to
     distinguish separate occurrences of a same-named blob having been created;
     the name of the newly created blob is carried in `subject`:
-    - `source: https://example.com/storage/tenant/container`
-    - `subject: mynewfile.jpg`
+    - `source`: `https://example.com/storage/tenant/container`
+    - `subject`: `mynewfile.jpg`
 
 #### CloudEvents-NL
 
@@ -393,14 +393,14 @@ messages if the copied values differ from the cloud-event serialized values.
 
 ### Defining Extensions
 
-See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#cloudevent-attribute-extensions)
+See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
 
 The definition of an extension SHOULD fully define all aspects of the
 attribute - e.g. its name, type, semantic meaning and possible values. New
 extension definitions SHOULD use a name that is descriptive enough to reduce the
 chances of name collisions with other extensions. In particular, extension
-authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.1/documented-extensions.md)
+authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/documented-extensions.md)
 document for the set of known extensions - not just for possible name conflicts
 but for extensions that might be of interest.
 
