@@ -301,13 +301,13 @@ on the definition of OPTIONAL.
   [IANA Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
-- Constraints:
-  - JSON-format SHOULD be used (see [[[ADR]]]). Part of this is the intention to
-  name JSON as the primary representation format for APIs. Because APIs play an 
-  important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
-  preferred to use for payload data).
+Constraints:
+- JSON-format SHOULD be used (see [[[ADR]]]). Part of this is the intention to
+name JSON as the primary representation format for APIs. Because APIs play an 
+important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
+preferred to use for payload data.
 
 </aside>
 
@@ -323,7 +323,7 @@ on the definition of OPTIONAL.
   - If present, MUST be a non-empty URI
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
 - Constraints:
   - It SHOULD be prevented that different schedules arise for the same data.
@@ -333,6 +333,8 @@ on the definition of OPTIONAL.
     (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
 
 </aside>    
+
+</aside>
 
 ### subject
 
@@ -365,7 +367,7 @@ on the definition of OPTIONAL.
     - `subject: mynewfile.jpg`
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
 - Constraints:
   - MUST be identifiable within context of the `source`
@@ -375,6 +377,8 @@ on the definition of OPTIONAL.
     - `source: urn:nld:oin:00000001823288444000:systeem:BRP-component`
     - `type: nl.brp.persoon-gehuwd`
     - `subject: 999990342` (citizen service number)
+</aside>
+
 </aside>
 
 ### time
@@ -392,16 +396,16 @@ on the definition of OPTIONAL.
     [RFC 3339](https://tools.ietf.org/html/rfc3339)
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
-- Constraints:
-  - The time the event was logged SHOULD be used (in many cases this is the only 
-    time that can be determined unambiguously).
-  - The exact meaning of `time` MUST be clearly documented.
-  - The time when an event occurred in reality SHOULD NOT be used (if there is a need for this 
-    among consumers, this can be included in payload data).
-  - If the time when an event occurred in reality is needed for things like 
-    routing or filtering, it can be included as a context attribute by the producer.
+- The time the event was logged SHOULD be used (in many cases this is the only 
+  time that can be determined unambiguously).
+- The exact meaning of `time` MUST be clearly documented.
+- The time when an event occurred in reality SHOULD NOT be used (if there is a need for this 
+  among consumers, this can be included in payload data).
+- If the time when an event occurred in reality is needed for things like 
+  routing or filtering, it can be included as a context attribute by the producer.
+
 </aside>
 
 ### Extension Context Attributes
@@ -451,18 +455,17 @@ can also be used to help intermediate gateways determine how to route the
 events.
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
-- Constraints:
+- Two of the extension attributes included by CloudEvents ('dataref' and 
+  'sequence') are included as optional attributes in the CloudEvents-NL profile 
+  because it is foreseen that there is often a need to use these attributes.
+- Extension attributes should be kept minimal to ensure the CloudEvent can be 
+  properly serialized and transported (e.g. when using HTTP-headers most HTTP 
+  servers will reject requests with excessive HTTP header data).
 
-  - Two of the extension attributes included by CloudEvents ('dataref' and 
-    'sequence') are included as optional attributes in the CloudEvents-NL profile 
-    because it is foreseen that there is often a need to use these attributes.
-  - Extension attributes should be kept minimal to ensure the CloudEvent can be 
-    properly serialized and transported (e.g. when using HTTP-headers most HTTP 
-    servers will reject requests with excessive HTTP header data).
 </aside>
-    
+  
 ### dataref
 
 - Type: `URI-reference`
@@ -508,7 +511,7 @@ both `data` and `dataref` (serialized as JSON):
 ```
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
 - Constraints:
   - MAY be used to reference an external data location (for example: a link back to 
@@ -518,6 +521,8 @@ both `data` and `dataref` (serialized as JSON):
     to issue a request back to the producer to obtain additional information (the time 
     aspect may deserve attention because changes may occur in the period that consumers
     are notified and the time of requesting additional information).
+</aside>
+
 </aside>
 
 ## Sequence
@@ -564,12 +569,12 @@ following semantics:
   (-2^31).
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>CloudEvents-NL: Additional content</b></br>
 
-- Constraints:
-  - Attribute 'sequence' can be helpful in situations where:
-  -  a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers 
-    via HTTP request)) or
-  - where there is a need for (re)synchronization (e.g. 
-    after errors have occurred).
+- Attribute 'sequence' can be helpful in situations where:
+-  a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers 
+  via HTTP request)) or
+- where there is a need for (re)synchronization (e.g. 
+  after errors have occurred).
+
 </aside>
