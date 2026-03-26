@@ -17,7 +17,8 @@ The following example shows a CloudEvent serialized as JSON:
 }
 ```
 
-## CloudEvents-NL
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br>
 
 In the example below, a number of agreements are visible as they apply within the CloudEvents-NL profile.
 In order to show as much things as possible, this is done in the form of a very extensive message.
@@ -66,3 +67,5 @@ Attribute names meet the CloudEvents specification requirements:
 
 - MUST consist of lower-case letters ('a' to 'z') or digits ('0' to '9') from the ASCII character set.
 - SHOULD be descriptive and terse and SHOULD NOT exceed 20 characters in length.
+
+</aside>
