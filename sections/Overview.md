@@ -19,5 +19,3 @@ implementations MUST support the [JSON format](https://github.com/cloudevents/sp
 
 For more information on the history, development and design rationale behind the
 specification, see the [CloudEvents Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md) document.
-
-

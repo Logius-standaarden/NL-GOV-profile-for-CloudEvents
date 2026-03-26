@@ -17,10 +17,10 @@ The following example shows a CloudEvent serialized as JSON:
 }
 ```
 
-**CloudEvents-NL**
+## CloudEvents-NL
 
 In the example below, a number of agreements are visible as they apply within the CloudEvents-NL profile.
-In order to show as much things as possible, this is done in the form of a very extensive message. 
+In order to show as much things as possible, this is done in the form of a very extensive message.
 In minimal form, a message contains only four mandatory attributes: `id`, `source`, `specversion` and `type`.
 For more information about a particular attribute, see the detailed attribute description.
 
@@ -46,23 +46,23 @@ For more information about a particular attribute, see the detailed attribute de
 }
 ```
 
-| Attribute | Explanation |
-| ------------- | ---------- | 
-|   specversion | Always '1.0' |
-|   type | Reverse DNS notation |
-|   source | Urn notation with 'nld' namespace identifier |
-|   subject | BSN as example; yet to be seen if and how attribute 'subject' will be used |
-|   id | Uuid (unique)|
-|   time | Time when event was recorded |
-|   nlbrpnationaliteit | Extension attribute with a BRP-domain specific meaning |
-|   geheimnummer | Extension attribute, to be treated as the equivalent of unset or omitted |
-|   dataref  | Extension attribute with a reference to where to get additional information |
-|   sequence | Extension attribute with an event tracking number |
-|   sequencetype | Extension attribut with indication of the type of sequence used |
-|   datacontenttype  | Indication of content type in attribute 'data' |
-|   data | Content information for consumer ('payload') |
+| Attribute          | Explanation                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| specversion        | Always '1.0'                                                                |
+| type               | Reverse DNS notation                                                        |
+| source             | Urn notation with 'nld' namespace identifier                                |
+| subject            | BSN as example; yet to be seen if and how attribute 'subject' will be used  |
+| id                 | Uuid (unique)                                                               |
+| time               | Time when event was recorded                                                |
+| nlbrpnationaliteit | Extension attribute with a BRP-domain specific meaning                      |
+| geheimnummer       | Extension attribute, to be treated as the equivalent of unset or omitted    |
+| dataref            | Extension attribute with a reference to where to get additional information |
+| sequence           | Extension attribute with an event tracking number                           |
+| sequencetype       | Extension attribut with indication of the type of sequence used             |
+| datacontenttype    | Indication of content type in attribute 'data'                              |
+| data               | Content information for consumer ('payload')                                |
 
 Attribute names meet the CloudEvents specification requirements:
-  - MUST consist of lower-case letters ('a' to 'z') or digits ('0' to '9') from the ASCII character set. 
-  - SHOULD be descriptive and terse and SHOULD NOT exceed 20 characters in length.
 
+- MUST consist of lower-case letters ('a' to 'z') or digits ('0' to '9') from the ASCII character set.
+- SHOULD be descriptive and terse and SHOULD NOT exceed 20 characters in length.
