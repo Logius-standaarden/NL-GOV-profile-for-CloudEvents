@@ -21,12 +21,12 @@ loadRespecWithConfiguration({
       { 
         "company" : "Logius",
         "name" : "Alexander Green",
-        "url" : "https://logius.nl/standaarden"
+        "url" : "https://www.logius.nl"
       },
       { 
         "company" : "Logius",
         "name" : "Stas Mironov",
-        "url" : "https://logius.nl/standaarden"
+        "url" : "https://www.logius.nl"
       }
   ],
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",
