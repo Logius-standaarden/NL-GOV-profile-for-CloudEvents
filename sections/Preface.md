@@ -1,4 +1,5 @@
-## Dutch government profile for CloudEvents 
+## Dutch government profile for CloudEvents
+
 This profile is based on [[[CloudEvents]]] as published by the [Serverless Working Group](https://github.com/cncf/wg-serverless) of the
  [Cloud Native Computing Foundation](https://www.cncf.io/).
 It should be considered a fork of this profile as the CloudEvents specification is geared more towards generic use and in the Netherlands we want to add a number of requirements for the Dutch situation with the goal to agree on how to use the CloudEvents specification.
@@ -11,12 +12,14 @@ The CloudEvents standard is based on the principle of not imposing more requirem
 Starting with chapter [Introduction](#introduction) we follow the structure of the CloudEvents profile. Where we do not use content from CloudEvents we use ~~strikethrough~~ to indicate it is not part of CloudEvents-NL. Where we have added more specific requirements for the Dutch situation this is indicated with the **CloudEvents-NL** tag.
 
 ### Usecases
- <figure id='authorization_code'>
-	<img alt="Pubsub image" src='media/use-case-pubsub1.png' width="600" />
-	<figcaption>Publish-subscribe pattern</figcaption>
- </figure>
+
+<figure id='authorization_code'>
+  <img alt="Pubsub image" src='media/use-case-pubsub1.png' width="600" />
+  <figcaption>Publish-subscribe pattern</figcaption>
+</figure>
 
 ### Introduction
+
 The basic pattern for use cases describes a (public/governmental) application in the role of '[producer](#producer)' that publishes '[events](#event)': data records expressing an occurrence and its context. Published events can be consumed by applications in the role of '[consumer](#consumer)'. Consumers subscribe to certain types of events. There may be one or more applications in the role of '[intermediary](#intermediary)' that take care of routing events to consumers based on contextual information. This is akin to the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
 
 Within this context, it concerns standardization of the automated exchange of event information via applications. In practice, agreements at business level are often also required between the parties involved.
