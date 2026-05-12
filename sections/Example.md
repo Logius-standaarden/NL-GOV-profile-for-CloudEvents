@@ -18,7 +18,7 @@ The following example shows a CloudEvent serialized as JSON:
 ```
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 In the example below, a number of agreements are visible as they apply within the NLgov profile for CloudEvents.
 In order to show as much things as possible, this is done in the form of a very extensive message.
