@@ -6,7 +6,7 @@ It should be considered a fork of this profile as the CloudEvents specification 
 
 The goal of the CloudEvents specification is to define interoperability of event systems that allow services to produce or consume events, where the producer and consumer can be developed and deployed independently. The ability to keep services loosely coupled within a distributed system such as the Dutch government makes it possible to work more often and in a better event-driven way. Using the CE standard supports this and makes maximum use of existing worldwide standards.
 
-The CloudEvents standard is based on the principle of not imposing more requirements on the parties involved than necessary. This means, among other things, that there are no requirements for how consumers should interpret and process received notifications. Constraints pertaining to consumers are therefore more often formulated with 'MAY' than with 'SHOULD' or 'MUST' (e.g. "Consumers MAY assume that Events with identical `source` and `id` are duplicates")) The GOV NL profile endorses this principle. In practice, the parties involved are of course allowed to apply stricter constraints.
+The CloudEvents standard is based on the principle of not imposing more requirements on the parties involved than necessary. This means, among other things, that there are no requirements for how consumers should interpret and process received notifications. Constraints pertaining to consumers are therefore more often formulated with 'MAY' than with 'SHOULD' or 'MUST' (e.g. "Consumers MAY assume that Events with identical `source` and `id` are duplicates")) The NLgov profile for CloudEvents endorses this principle. In practice, the parties involved are of course allowed to apply stricter constraints.
 
 <!-- ⚠️ *TODO* We have added a number of [Use Cases](#usecases) to illustrate the specific usage the CloudEvents-NL profile is aimed at. -->
 Starting with chapter [Introduction](#introduction) we follow the structure of the CloudEvents profile. Where we do not use content from CloudEvents we use ~~strikethrough~~ to indicate it is not part of CloudEvents-NL. Where we have added more specific requirements for the Dutch situation this is indicated with the **CloudEvents-NL** tag.
@@ -24,4 +24,4 @@ The basic pattern for use cases describes a (public/governmental) application in
 
 Within this context, it concerns standardization of the automated exchange of event information via applications. In practice, agreements at business level are often also required between the parties involved.
 
-<!-- ⚠️ *TODO* A number of [use cases](use-cases) have been described that clarify the use of the GOV NL profile. -->
+<!-- ⚠️ *TODO* A number of [use cases](use-cases) have been described that clarify the use of the NLgov profile for CloudEvents. -->
