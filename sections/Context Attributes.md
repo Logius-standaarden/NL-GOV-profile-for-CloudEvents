@@ -444,7 +444,7 @@ events.
 <b>CloudEvents-NL: Additional content</b></br>
 
 - Two of the extension attributes included by CloudEvents ('dataref' and
-  'sequence') are included as optional attributes in the CloudEvents-NL profile
+  'sequence') are included as optional attributes in the NLgov profile for CloudEvents
   because it is foreseen that there is often a need to use these attributes.
 - Extension attributes should be kept minimal to ensure the CloudEvent can be
   properly serialized and transported (e.g. when using HTTP-headers most HTTP

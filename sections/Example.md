@@ -20,7 +20,7 @@ The following example shows a CloudEvent serialized as JSON:
 <aside class=" addition">
 <b>CloudEvents-NL: Additional content</b></br>
 
-In the example below, a number of agreements are visible as they apply within the CloudEvents-NL profile.
+In the example below, a number of agreements are visible as they apply within the NLgov profile for CloudEvents.
 In order to show as much things as possible, this is done in the form of a very extensive message.
 In minimal form, a message contains only four mandatory attributes: `id`, `source`, `specversion` and `type`.
 For more information about a particular attribute, see the detailed attribute description.
