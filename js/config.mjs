@@ -1,29 +1,29 @@
 import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
 
 loadRespecWithConfiguration({
-  authors: [{ 
+  authors: [{
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Ad Gerrits"
       },
-      { 
+      {
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Gershon Jansen"
       },
-      { 
+      {
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Jeanot Bijpost"
       }
            ],
-  editors: [ 
-      { 
+  editors: [
+      {
         "company" : "Logius",
         "name" : "Alexander Green",
         "url" : "https://www.logius.nl"
       },
-      { 
+      {
         "company" : "Logius",
         "name" : "Stas Mironov",
         "url" : "https://www.logius.nl"

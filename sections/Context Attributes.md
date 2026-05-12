@@ -110,7 +110,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - A UUID
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - Constraints:
   - If an ID is available that can persistently identify the event, producers MUST
@@ -161,7 +161,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - 1-555-123-4567
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - Constraints:
   - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
@@ -223,7 +223,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - com.example.object.deleted.v2
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 Constraints:
 
@@ -286,7 +286,7 @@ on the definition of OPTIONAL.
   [IANA Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 Constraints:
 
@@ -309,7 +309,7 @@ preferred to use for payload data.
   - If present, MUST be a non-empty URI
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 Constraints:
 
@@ -352,7 +352,7 @@ Constraints:
     - `subject: mynewfile.jpg`
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 Constraints:
 
@@ -382,7 +382,7 @@ Example:
     [RFC 3339](https://tools.ietf.org/html/rfc3339)
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - The time the event was logged SHOULD be used (in many cases this is the only
   time that can be determined unambiguously).
@@ -441,10 +441,10 @@ can also be used to help intermediate gateways determine how to route the
 events.
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - Two of the extension attributes included by CloudEvents ('dataref' and
-  'sequence') are included as optional attributes in the CloudEvents-NL profile
+  'sequence') are included as optional attributes in the NLgov profile for CloudEvents
   because it is foreseen that there is often a need to use these attributes.
 - Extension attributes should be kept minimal to ensure the CloudEvent can be
   properly serialized and transported (e.g. when using HTTP-headers most HTTP
@@ -497,7 +497,7 @@ both `data` and `dataref` (serialized as JSON):
 ```
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - MAY be used to reference an external data location (for example: a link back to
   the producer of the event that can be queried for more information about the event).
@@ -553,7 +553,7 @@ following semantics:
   (-2^31).
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>
+<b>NLgov: Additional content</b></br>
 
 - Attribute 'sequence' can be helpful in situations where:
   - a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers
