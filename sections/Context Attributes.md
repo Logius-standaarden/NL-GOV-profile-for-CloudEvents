@@ -110,10 +110,10 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - A UUID
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br>  
+<b>NLgov: Additional content</b></br>
 
 - Constraints:
-  - If an ID is available that can persistently identify the event, producers MUST 
+  - If an ID is available that can persistently identify the event, producers MUST
     use that ID. For example so that consumers may use `id` to request information
     about the event from the source.
   - If no ID is available that can persistently identify the event producers SHOULD use a random ID:
@@ -121,10 +121,11 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - MUST describe the limitations (e.g., that it's just a random ID and has no relation to the occurrence event) in the [[[#dataschema]]] attribute.
 - Examples:
   - 'doc2021033441' (ID of the document created as a result of an event that occurred).
-  - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of 
+  - 'f3dce042-cd6e-4977-844d-05be8dce7cea' (UUID generated with the sole function of
     being able to uniquely identify the event.
+
 </aside>
- 
+
 ### source
 
 - Type: `URI-reference`
@@ -160,7 +161,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
     - `1-555-123-4567`
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br> 
+<b>NLgov: Additional content</b></br>
 
 - Constraints:
   - SHOULD be a [URN notation](https://en.wikipedia.org/wiki/Uniform_Resource_Name) with 'nld' as namespace identifier.
@@ -180,7 +181,8 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - urn:nld:kvknr:09220932.burgerzakensysteem
   - urn:nld:gemeente-nijmegen.burgerzakensysteem
   - urn:nld:gemeente-Bergen%20%28L%29.burgerzakensysteem
-    **_Comment_**: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
+
+**_Comment_**: The use of (unique) descriptions increases recognisability, but also has disadvantages such as occurred changes or required encoding (like in the above example where "Bergen (L)" requires encoding).
 </aside>
 
 ### specversion
@@ -221,9 +223,10 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - com.example.object.deleted.v2
 
 <aside class=" addition">
-<b>CloudEvents-NL: Additional content</b></br> 
+<b>NLgov: Additional content</b></br>
 
 Constraints:
+
 - MUST be [Reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
 - MAY be further specified by adding a suffix (for example: `nl.brp.verhuizing.binnengemeentelijk` instead of `nl.brp.binnengemeentelijke-verhuizing`)
 - Producers MUST facilitate consumers to request additional information on the type and adequatly explain the exact meaning.
@@ -240,7 +243,6 @@ Constraints:
 - Names of organizations SHOULD NOT be used (because they are not time invariant).
 
 </aside>
-
 
 ## OPTIONAL Attributes
 
@@ -283,13 +285,17 @@ on the definition of OPTIONAL.
 - For Media Type examples see
   [IANA Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
 Constraints:
+
 - JSON-format SHOULD be used (see [[[ADR]]]). Part of this is the intention to
-name JSON as the primary representation format for APIs. Because APIs play an 
-important role in communicating events (e.g., when using the webhook pattern) the JSON format is 
-preferred to use for payload data).
+name JSON as the primary representation format for APIs. Because APIs play an
+important role in communicating events (e.g., when using the webhook pattern) the JSON format is
+preferred to use for payload data.
+
+</aside>
 
 ### dataschema
 
@@ -302,14 +308,18 @@ preferred to use for payload data).
   - OPTIONAL
   - If present, MUST be a non-empty URI
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
 Constraints:
+
 - It SHOULD be prevented that different schedules arise for the same data.
-- The dataschema attribute is expected to be informational, largely to be used 
-  during development and by tooling that is able to provide diagnostic information 
-  over arbitrary CloudEvents with a data content type understood by that tooling 
-  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
+- The dataschema attribute is expected to be informational, largely to be used
+  during development and by tooling that is able to provide diagnostic information
+  over arbitrary CloudEvents with a data content type understood by that tooling
+  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
+
+</aside>
 
 ### subject
 
@@ -341,16 +351,21 @@ Constraints:
     - `source`: `https://example.com/storage/tenant/container`
     - `subject`: `mynewfile.jpg`
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
 Constraints:
-- Decision on whether or not to use the attribute and/or the exact interpretation is postponed. 
+
+- Decision on whether or not to use the attribute and/or the exact interpretation is postponed.
 To be determined partly on the basis of future agreements about subscription and filtering.
 
 Example:
-  - `source: urn:nld:oin:00000001823288444000:systeem:BRP-component`
-  - `type: nl.brp.persoon-gehuwd`
-  - `subject: 999990342` (citizen service number)
+
+- `source: urn:nld:oin:00000001823288444000:systeem:BRP-component`
+- `type: nl.brp.persoon-gehuwd`
+- `subject: 999990342` (citizen service number)
+
+</aside>
 
 ### time
 
@@ -366,14 +381,18 @@ Example:
   - If present, MUST adhere to the format specified in
     [RFC 3339](https://tools.ietf.org/html/rfc3339)
 
-#### CloudEvents-NL
-- The time the event was logged SHOULD be used (in many cases this is the only 
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
+
+- The time the event was logged SHOULD be used (in many cases this is the only
   time that can be determined unambiguously).
 - The exact meaning of `time` MUST be clearly documented.
-- The time when an event occurred in reality SHOULD NOT be used (if there is a need for this 
+- The time when an event occurred in reality SHOULD NOT be used (if there is a need for this
   among consumers, this can be included in payload data).
-- If the time when an event occurred in reality is needed for things like 
+- If the time when an event occurred in reality is needed for things like
   routing or filtering, it can be included as a context attribute by the producer.
+
+</aside>
 
 ### Extension Context Attributes
 
@@ -421,15 +440,18 @@ without needing to decode and examine the event data. Such identity attributes
 can also be used to help intermediate gateways determine how to route the
 events.
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
-- Two of the extension attributes included by CloudEvents ('dataref' and 
-  'sequence') are included as optional attributes in the CloudEvents-NL profile 
+- Two of the extension attributes included by CloudEvents ('dataref' and
+  'sequence') are included as optional attributes in the NLgov profile for CloudEvents
   because it is foreseen that there is often a need to use these attributes.
-- Extension attributes should be kept minimal to ensure the CloudEvent can be 
-  properly serialized and transported (e.g. when using HTTP-headers most HTTP 
+- Extension attributes should be kept minimal to ensure the CloudEvent can be
+  properly serialized and transported (e.g. when using HTTP-headers most HTTP
   servers will reject requests with excessive HTTP header data).
-  
+
+</aside>
+
 ### dataref
 
 - Type: `URI-reference`
@@ -474,15 +496,18 @@ both `data` and `dataref` (serialized as JSON):
 }
 ```
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
-- MAY be used to reference an external data location (for example: a link back to 
+- MAY be used to reference an external data location (for example: a link back to
   the producer of the event that can be queried for more information about the event).
-- MAY be used to implenment 'informatiearm notificeren' where the consumer of the 
-  event receives some minimal information on the nature of the event, but then has 
-  to issue a request back to the producer to obtain additional information (the time 
+- MAY be used to implenment 'informatiearm notificeren' where the consumer of the
+  event receives some minimal information on the nature of the event, but then has
+  to issue a request back to the producer to obtain additional information (the time
   aspect may deserve attention because changes may occur in the period that consumers
   are notified and the time of requesting additional information).
+
+</aside>
 
 ## Sequence
 
@@ -527,10 +552,13 @@ following semantics:
 - The sequence wraps around from 2,147,483,647 (2^31 -1) to -2,147,483,648
   (-2^31).
 
-#### CloudEvents-NL
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
 
 - Attribute 'sequence' can be helpful in situations where:
--  a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers 
-  via HTTP request)) or
-- where there is a need for (re)synchronization (e.g. 
-  after errors have occurred).
+  - a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers
+    via HTTP request)) or
+  - where there is a need for (re)synchronization (e.g.
+    after errors have occurred).
+
+</aside>

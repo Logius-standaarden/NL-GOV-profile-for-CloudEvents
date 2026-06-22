@@ -1,7 +1,7 @@
 #Use-case
 
 ##Introduction
-The GOV NL profile for CloudEvents specifies how producers, intermediairy's
+The NLgov profile for CloudEvents specifies how producers, intermediairy's
 and consumers can exchange event data in a common format to provide interoperability 
 across services, platforms and systems.
 

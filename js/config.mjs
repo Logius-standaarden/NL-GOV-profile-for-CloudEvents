@@ -1,42 +1,42 @@
 import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
 
 loadRespecWithConfiguration({
-  authors: [{ 
+  authors: [{
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Ad Gerrits"
       },
-      { 
+      {
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Gershon Jansen"
       },
-      { 
+      {
         "company" : "VNG Realisatie",
         "companyURL" : "https://www.vngrealisatie.nl/",
         "name" : "Jeanot Bijpost"
       }
            ],
-  editors: [ 
-      { 
+  editors: [
+      {
         "company" : "Logius",
         "name" : "Alexander Green",
-        "url" : "https://logius.nl/standaarden"
+        "url" : "https://www.logius.nl"
       },
-      { 
+      {
         "company" : "Logius",
         "name" : "Stas Mironov",
-        "url" : "https://logius.nl/standaarden"
+        "url" : "https://www.logius.nl"
       }
   ],
   github: "https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents",
   pubDomain: "notificatieservices",
   previousPublishDate: "2025-10-10",
   previousPublishVersion: "1.0",
-  publishDate: "2026-01-07",
+  publishDate: "2026-03-17",
   publishVersion: "1.1",
   shortName: "cloudevents-nl",
-  specStatus: "VV",
+  specStatus: "WV",
   specType: "ST",
   subtitle: "Notificatieservices"
 });
