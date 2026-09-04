@@ -188,7 +188,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 ### specversion
 
 - Type: `String`
-- Description: The version of the CloudEvents specification which the event
+- Description: The version of the CNCF CloudEvents specification which the event
   uses. This enables the interpretation of the context. Compliant event
   producers MUST use a value of `1.0` when referring to this version of the
   specification.
@@ -202,6 +202,12 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Constraints:
   - REQUIRED
   - MUST be a non-empty string
+ 
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
+- Note on version divergence
+  The version of this profile is deliberately decoupled from specversion. NL GOV profile 1.1 (current version) constrains CNCF CloudEvents 1.0 events, and a future NL GOV profile will continue to do so for as long as the CNCF core specification remains at 1.0. 
+</aside>
 
 ### type
 
