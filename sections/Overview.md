@@ -18,4 +18,4 @@ adhere to the encoding rules specified in the respective event format. All
 implementations MUST support the [JSON format](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/json-format.md).
 
 For more information on the history, development and design rationale behind the
-specification, see the [CloudEvents Primer](https://github.com/cloudevents/spec/blob/v1.0.2/primer.md) document.
+specification, see the [CloudEvents Primer](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md) document.
