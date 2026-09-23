@@ -39,6 +39,7 @@ string-encoding for each type that MUST be supported by all implementations.
   `Integer` values in this range.
   - String encoding: Integer component of the JSON Number per
     [RFC 7159, Section 6](https://tools.ietf.org/html/rfc7159#section-6)
+    optionally prefixed with a minus sign.
 - `String` - Sequence of allowable Unicode characters. The following characters
   are disallowed:
   - the "control characters" in the ranges U+0000-U+001F and U+007F-U+009F (both
