@@ -206,7 +206,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 <aside class=" addition">
 <b>NLgov: Additional content</b></br>
 - Note on version divergence
-  The version of this profile is deliberately decoupled from specversion. NL GOV profile 1.1 (current version) constrains CNCF CloudEvents 1.0 events, and a future NL GOV profile will continue to do so for as long as the CNCF core specification remains at 1.0.
+  The version of this profile is deliberately decoupled from specversion. This profile constrains CNCF CloudEvents 1.0 events. Therefore, specversion remains 1.0 regardless of the version of this profile.
 </aside>
 
 ### type
