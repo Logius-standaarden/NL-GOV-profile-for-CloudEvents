@@ -152,7 +152,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Examples
   - Internet-wide unique URI with a DNS authority.
     - <https://github.com/cloudevents>
-    - mailto:cncf-wg-serverless@lists.cncf.io
+    - mailto:<cncf-wg-serverless@lists.cncf.io>
   - Universally-unique URN with a UUID:
     - urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66
   - Application-specific identifiers
@@ -188,7 +188,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 ### specversion
 
 - Type: `String`
-- Description: The version of the CloudEvents specification which the event
+- Description: The version of the CNCF CloudEvents specification which the event
   uses. This enables the interpretation of the context. Compliant event
   producers MUST use a value of `1.0` when referring to this version of the
   specification.
@@ -202,6 +202,12 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Constraints:
   - REQUIRED
   - MUST be a non-empty string
+
+<aside class=" addition">
+<b>NLgov: Additional content</b></br>
+- Note on version divergence
+  The version of this profile is deliberately decoupled from specversion. This profile constrains CNCF CloudEvents 1.0 events. Therefore, specversion remains 1.0 regardless of the version of this profile.
+</aside>
 
 ### type
 
