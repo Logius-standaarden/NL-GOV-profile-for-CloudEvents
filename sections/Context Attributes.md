@@ -513,7 +513,7 @@ both `data` and `dataref` (serialized as JSON):
 
 <aside class=" addition">
 <b>CloudEvents-NL: Additional content</b></br>
-The Sequence extension in this section is optional in this profile. 
+The Sequence extension in this section is optional in this profile.
 The following constraints are applicable only if this extension is implemented.
 </aside>
 
