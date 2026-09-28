@@ -511,6 +511,12 @@ both `data` and `dataref` (serialized as JSON):
 
 ## Sequence
 
+<aside class=" addition">
+<b>CloudEvents-NL: Additional content</b></br>
+The Sequence extension in this section is optional in this profile. 
+The following constraints are applicable only if this extension is implemented.
+</aside>
+
 This extension defines two attributes that can be included within a CloudEvent to describe the position of an event in the ordered sequence of events produced by a unique event source.
 The `sequence` attribute represents the value of this event's order in the stream of events. The exact value and meaning of this attribute is defined by the `sequencetype` attribute. If the `sequencetype` is missing, or not defined in this specification, event consumers will need to have some out-of-band communication with the event producer to understand how to interpret the value
 of the attribute.
