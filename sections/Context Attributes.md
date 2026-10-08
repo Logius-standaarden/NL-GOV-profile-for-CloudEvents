@@ -152,7 +152,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
 - Examples
   - Internet-wide unique URI with a DNS authority.
     - <https://github.com/cloudevents>
-    - mailto:<cncf-wg-serverless@lists.cncf.io>
+    - mailto:cncf-wg-serverless@lists.cncf.io
   - Universally-unique URN with a UUID:
     - urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66
   - Application-specific identifiers
