@@ -411,7 +411,7 @@ interact with non-CloudEvents systems that also process the message. Extension
 specifications that do this SHOULD specify how receivers are to interpret
 messages if the copied values differ from the cloud-event serialized values.
 
-### Defining Extensions
+#### Defining Extensions
 
 See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
@@ -440,108 +440,3 @@ event "data", the event producer would also add the identity attributes to the
 without needing to decode and examine the event data. Such identity attributes
 can also be used to help intermediate gateways determine how to route the
 events.
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- Two of the extension attributes included by CloudEvents ('dataref' and
-  'sequence') are included as optional attributes in the NLgov profile for CloudEvents
-  because it is foreseen that there is often a need to use these attributes.
-- Extension attributes should be kept minimal to ensure the CloudEvent can be
-  properly serialized and transported (e.g. when using HTTP-headers most HTTP
-  servers will reject requests with excessive HTTP header data).
-
-</aside>
-
-### dataref
-
-- Type: `URI-reference`
-- Description: A reference to a location where the event payload is stored. The
-  location MAY not be accessible without further information (e.g. a pre-shared
-  secret).
-
-  Known as the "Claim Check Pattern", this attribute MAY be used for a variety
-  of purposes, including:
-
-  - If the [Data](#data) is too large to be included in the message,
-    the `data` is not present, and the consumer can retrieve it using
-    this attribute.
-  - If the consumer wants to verify that the [Data](#data) has not
-    been tampered with, it can retrieve it from a trusted source using this
-    attribute.
-  - If the [Data](#data) MUST only be viewed by trusted consumers
-    (e.g. personally identifiable information), only a trusted consumer can
-    retrieve it using this attribute and a pre-shared secret.
-
-  If this attribute is used, the information SHOULD be accessible long enough
-  for all consumers to retrieve it, but MAY not be stored for an extended period
-  of time.
-
-- Constraints:
-  - OPTIONAL
-
-#### Example
-
-The following example shows a CloudEvent in which the event producer has included
-both `data` and `dataref` (serialized as JSON):
-
-```JSON
-{
-    "specversion" : "1.0",
-    "type" : "com.github.pull_request.opened",
-    "source" : "https://github.com/cloudevents/spec/pull/123",
-    "id" : "A234-1234-1234",
-    "datacontenttype" : "text/xml",
-    "data" : "<much wow=\"xml\"/>",
-    "dataref" : "https://github.com/cloudevents/spec/pull/123/events/A234-1234-1234.xml"
-}
-```
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- MAY be used to reference an external data location (for example: a link back to
-  the producer of the event that can be queried for more information about the event).
-- MAY be used to implenment 'informatiearm notificeren' where the consumer of the
-  event receives some minimal information on the nature of the event, but then has
-  to issue a request back to the producer to obtain additional information (the time
-  aspect may deserve attention because changes may occur in the period that consumers
-  are notified and the time of requesting additional information).
-
-</aside>
-
-## Sequence
-
-This extension defines two attributes that can be included within a CloudEvent to describe the position of an event in the ordered sequence of events produced by a unique event source.
-The `sequence` attribute represents the value of this event's order in the stream of events. This specification does not define the meaning or set of valid value of this attribute, rather it only mandates that the value be a string that can be lexicographically compared to other `sequence` values to determine which one comes first. The `sequence` with a lower lexicographical value comes first.
-
-Produces and consumers are free to define an out-of-band agreement on the semantic meaning, or valid values, for the attribute.
-
-If sequence comparison across multiple dimensions is needed (e.g., per source AND subject), implementers have two options:
-  - Include the additional dimension in the `source` attribute value (e.g., `"source": "https://example.com/users/service/subject123"`)
-  - Define a new extension that meets their specific sequencing requirements
-
-### Attributes
-
-#### sequence
-
-- Type: `String`
-- Description: Value expressing the relative order of the event. This enables
-  interpretation of data supercedence.
-- Constraints
-  - REQUIRED
-  - MUST be a non-empty lexicographically-orderable string
-  - RECOMMENDED as monotonically increasing and contiguous
-
-The entity creating the CloudEvent MUST ensure that the `sequence` values used are formatted such that across the entire set of values used a receiver can determine the order of the events via a simple string-compare type of operation. This means that it might be necessary for the value to include some kind of padding (e.g. leading zeros in the case of the value being the string representation of an integer).
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- Attribute 'sequence' can be helpful in situations where:
-  - a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers
-    via HTTP request)) or
-  - where there is a need for (re)synchronization (e.g.
-    after errors have occurred).
-
-</aside>
