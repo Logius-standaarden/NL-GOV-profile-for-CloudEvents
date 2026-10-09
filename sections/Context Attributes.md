@@ -31,14 +31,15 @@ these types MAY be represented differently by different event formats and in
 protocol metadata fields. This specification defines a canonical
 string-encoding for each type that MUST be supported by all implementations.
 
-- `Boolean` - a boolean value of "true" or "false".
+- `Boolean` - A boolean value of "true" or "false".
   - String encoding: a case-sensitive value of `true` or `false`.
 - `Integer` - A whole number in the range -2,147,483,648 to +2,147,483,647
   inclusive. This is the range of a signed, 32-bit, twos-complement encoding.
   Event formats do not have to use this encoding, but they MUST only use
   `Integer` values in this range.
-  - String encoding: Integer portion of the JSON Number per
+  - String encoding: Integer component of the JSON Number per
     [RFC 7159, Section 6](https://tools.ietf.org/html/rfc7159#section-6)
+    optionally prefixed with a minus sign.
 - `String` - Sequence of allowable Unicode characters. The following characters
   are disallowed:
   - the "control characters" in the ranges U+0000-U+001F and U+007F-U+009F (both
@@ -106,7 +107,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - MUST be a non-empty string
   - MUST be unique within the scope of the producer
 - Examples:
-  - An ID  counter maintained by the producer
+  - An event  counter maintained by the producer
   - A UUID
 
 <aside class=" addition">
@@ -151,14 +152,14 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   - An absolute URI is RECOMMENDED
 - Examples
   - Internet-wide unique URI with a DNS authority.
-    - <https://github.com/cloudevents>
-    - mailto:cncf-wg-serverless@lists.cncf.io
+    - `https://github.com/cloudevents`
+    - `mailto:cncf-wg-serverless@lists.cncf.io`
   - Universally-unique URN with a UUID:
-    - urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66
+    - `urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66`
   - Application-specific identifiers
-    - /cloudevents/spec/pull/123
-    - /sensors/tn-1234567/alerts
-    - 1-555-123-4567
+    - `/cloudevents/spec/pull/123`
+    - `/sensors/tn-1234567/alerts`
+    - `1-555-123-4567`
 
 <aside class=" addition">
 <b>NLgov: Additional content</b></br>
@@ -217,7 +218,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
   routing, observability, policy enforcement, etc. The format of this is
   producer defined and might include information such as the version of the
   `type` - see
-  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - REQUIRED
@@ -262,17 +263,17 @@ on the definition of OPTIONAL.
 - Description: Content type of `data` value. This attribute enables `data` to
   carry any type of content, whereby format and encoding might differ from that
   of the chosen event format. For example, an event rendered using the
-  [JSON envelope](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#3-envelope) format might carry an XML payload
+  [JSON envelope](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/json-format.md#3-envelope) format might carry an XML payload
   in `data`, and the consumer is informed by this attribute being set to
   "application/xml". The rules for how `data` content is rendered for different
   `datacontenttype` values are defined in the event format specifications; for
   example, the JSON event format defines the relationship in
-  [section 3.1](https://github.com/cloudevents/spec/blob/v1.0.1/json-format.md#31-handling-of-data).
+  [section 3.1](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/json-format.md#31-handling-of-data).
 
   For some binary mode protocol bindings, this field is directly mapped to the
   respective protocol's content-type metadata property. Normative rules for the
   binary mode and the content-type metadata mapping can be found in the
-  respective protocol
+  respective protocol.
 
   In some event formats the `datacontenttype` attribute MAY be omitted. For
   example, if a JSON format event has no `datacontenttype` attribute, then it is
@@ -308,7 +309,7 @@ preferred to use for payload data.
 - Type: `URI`
 - Description: Identifies the schema that `data` adheres to. Incompatible
   changes to the schema SHOULD be reflected by a different URI. See
-  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#versioning-of-cloudevents)
+  [Versioning of CloudEvents in the Primer](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#versioning-of-cloudevents)
   for more information.
 - Constraints:
   - OPTIONAL
@@ -323,7 +324,7 @@ Constraints:
 - The dataschema attribute is expected to be informational, largely to be used
   during development and by tooling that is able to provide diagnostic information
   over arbitrary CloudEvents with a data content type understood by that tooling
-  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
+  (see: [The role of the dataschema attribute within versioning](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#the-role-of-the-dataschema-attribute-within-versioning)
 
 </aside>
 
@@ -354,8 +355,8 @@ Constraints:
     created" event, and the `id` uniquely identifies the event instance to
     distinguish separate occurrences of a same-named blob having been created;
     the name of the newly created blob is carried in `subject`:
-    - `source: https://example.com/storage/tenant/container`
-    - `subject: mynewfile.jpg`
+    - `source`: `https://example.com/storage/tenant/container`
+    - `subject`: `mynewfile.jpg`
 
 <aside class=" addition">
 <b>NLgov: Additional content</b></br>
@@ -416,16 +417,16 @@ interact with non-CloudEvents systems that also process the message. Extension
 specifications that do this SHOULD specify how receivers are to interpret
 messages if the copied values differ from the cloud-event serialized values.
 
-### Defining Extensions
+#### Defining Extensions
 
-See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.1/primer.md#cloudevent-attribute-extensions)
+See [CloudEvent Attributes Extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#cloudevent-attribute-extensions)
 for additional information concerning the use and definition of extensions.
 
 The definition of an extension SHOULD fully define all aspects of the
 attribute - e.g. its name, type, semantic meaning and possible values. New
 extension definitions SHOULD use a name that is descriptive enough to reduce the
 chances of name collisions with other extensions. In particular, extension
-authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.1/documented-extensions.md)
+authors SHOULD check the [documented extensions](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/documented-extensions.md)
 document for the set of known extensions - not just for possible name conflicts
 but for extensions that might be of interest.
 
@@ -445,126 +446,3 @@ event "data", the event producer would also add the identity attributes to the
 without needing to decode and examine the event data. Such identity attributes
 can also be used to help intermediate gateways determine how to route the
 events.
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- Two of the extension attributes included by CloudEvents ('dataref' and
-  'sequence') are included as optional attributes in the NLgov profile for CloudEvents
-  because it is foreseen that there is often a need to use these attributes.
-- Extension attributes should be kept minimal to ensure the CloudEvent can be
-  properly serialized and transported (e.g. when using HTTP-headers most HTTP
-  servers will reject requests with excessive HTTP header data).
-
-</aside>
-
-### dataref
-
-- Type: `URI-reference`
-- Description: A reference to a location where the event payload is stored. The
-  location MAY not be accessible without further information (e.g. a pre-shared
-  secret).
-
-  Known as the "Claim Check Pattern", this attribute MAY be used for a variety
-  of purposes, including:
-
-  - If the [Data](#data) is too large to be included in the message,
-    the `data` is not present, and the consumer can retrieve it using
-    this attribute.
-  - If the consumer wants to verify that the [Data](#data) has not
-    been tampered with, it can retrieve it from a trusted source using this
-    attribute.
-  - If the [Data](#data) MUST only be viewed by trusted consumers
-    (e.g. personally identifiable information), only a trusted consumer can
-    retrieve it using this attribute and a pre-shared secret.
-
-  If this attribute is used, the information SHOULD be accessible long enough
-  for all consumers to retrieve it, but MAY not be stored for an extended period
-  of time.
-
-- Constraints:
-  - OPTIONAL
-
-#### Example
-
-The following example shows a CloudEvent in which the event producer has included
-both `data` and `dataref` (serialized as JSON):
-
-```JSON
-{
-    "specversion" : "1.0",
-    "type" : "com.github.pull_request.opened",
-    "source" : "https://github.com/cloudevents/spec/pull/123",
-    "id" : "A234-1234-1234",
-    "datacontenttype" : "text/xml",
-    "data" : "<much wow=\"xml\"/>",
-    "dataref" : "https://github.com/cloudevents/spec/pull/123/events/A234-1234-1234.xml"
-}
-```
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- MAY be used to reference an external data location (for example: a link back to
-  the producer of the event that can be queried for more information about the event).
-- MAY be used to implenment 'informatiearm notificeren' where the consumer of the
-  event receives some minimal information on the nature of the event, but then has
-  to issue a request back to the producer to obtain additional information (the time
-  aspect may deserve attention because changes may occur in the period that consumers
-  are notified and the time of requesting additional information).
-
-</aside>
-
-## Sequence
-
-This extension defines two attributes that can be included within a CloudEvent to describe the position of an event in the ordered sequence of events produced by a unique event source.
-The `sequence` attribute represents the value of this event's order in the stream of events. The exact value and meaning of this attribute is defined by the `sequencetype` attribute. If the `sequencetype` is missing, or not defined in this specification, event consumers will need to have some out-of-band communication with the event producer to understand how to interpret the value
-of the attribute.
-
-### Attributes
-
-#### sequence
-
-- Type: `String`
-- Description: Value expressing the relative order of the event. This enables
-  interpretation of data supercedence.
-- Constraints
-  - REQUIRED
-  - MUST be a non-empty lexicographically-orderable string
-  - RECOMMENDED as monotonically increasing and contiguous
-
-#### sequencetype
-
-- Type: `String`
-- Description: Specifies the semantics of the sequence attribute. See the
-  [SequenceType Values](#sequencetype-values) section for more information.
-- Constraints:
-  - OPTIONAL
-  - If present, MUST be a non-empty string
-
-##### SequenceType Values
-
-This specification defines the following values for `sequencetype`. Additional
-values MAY be defined by other specifications.
-
-##### Integer
-
-If the `sequencetype` is set to `Integer`, the `sequence` attribute has the
-following semantics:
-
-- The values of `sequence` are string-encoded signed 32-bit Integers.
-- The sequence MUST start with a value of `1` and increase by `1` for each
-  subsequent value (i.e. be contiguous and monotonically increasing).
-- The sequence wraps around from 2,147,483,647 (2^31 -1) to -2,147,483,648
-  (-2^31).
-
-<aside class=" addition">
-<b>NLgov: Additional content</b></br>
-
-- Attribute 'sequence' can be helpful in situations where:
-  - a form of 'pull mechanism' is used ((e.g. periodically fetching events by consumers
-    via HTTP request)) or
-  - where there is a need for (re)synchronization (e.g.
-    after errors have occurred).
-
-</aside>
