@@ -4,7 +4,7 @@ The NLgov profile for CloudEvents message format can be used when using differen
 
 In addition to the CloudEvent specification the [Serverless Working Group](https://github.com/cncf/wg-serverless) has described for [several commonly used formats](https://github.com/cloudevents/spec#cloudevents-documents) and protocols how they can be used in a standardized way in combination with the CloudEvents message format.
 
-This appendix describes how the NLgov profile for CloudEvents can be applied using the following optional specifications:
+This appendix highlights the following optional specifications for use with the NLgov Profile for CloudEvents:
 
 - The [JSON Event Format for CloudEvents](https://github.com/cloudevents/spec/blob/main/cloudevents/formats/json-format.md) specification.
 - The [HTTP Protocol Binding for CloudEvents](https://github.com/cloudevents/spec/blob/main/cloudevents/bindings/http-protocol-binding.md) specification.
