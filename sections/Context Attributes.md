@@ -176,7 +176,7 @@ The following attributes are REQUIRED to be present in all CloudEvents:
       - SHOULD use the [eIDAS legal identifier](https://afsprakenstelsel.etoegang.nl/) in the EU context.
   national, European or worldwide)
     - SHOULD choose an abstraction level for the source that can be used sustainably; even if the initial scope expands (e.g., scope creep from domain specific to more general categorization).
-  - MUST NOT be used to reference an external data location (see [[[#dataref]]]).
+  - MUST NOT be used to reference an external data location (see [dataref](https://github.com/cloudevents/spec/blob/main/cloudevents/extensions/dataref.md)).
 - Examples:
   - urn:nld:oin:00000001823288444000:systeem:BRP-component
   - urn:nld:kvknr:09220932.burgerzakensysteem
