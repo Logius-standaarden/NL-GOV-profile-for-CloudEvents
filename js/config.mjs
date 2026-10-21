@@ -39,4 +39,13 @@ loadRespecWithConfiguration({
   specStatus: "WV",
   specType: "ST",
   subtitle: "Notificatieservices"
+
+    localBiblio: {
+    "CloudEvents-Extensions": {
+      title: "CloudEvents Extension Attributes",
+      href: "https://github.com/cloudevents/spec/blob/main/cloudevents/extensions/README.md",
+      publisher: "CNCF CloudEvents",
+      status: "Living document"
+    }
+  }
 });
