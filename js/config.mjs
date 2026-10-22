@@ -38,9 +38,9 @@ loadRespecWithConfiguration({
   shortName: "cloudevents-nl",
   specStatus: "WV",
   specType: "ST",
-  subtitle: "Notificatieservices"
+  subtitle: "Notificatieservices",
 
-    localBiblio: {
+  localBiblio: {
     "CloudEvents-Extensions": {
       title: "CloudEvents Extension Attributes",
       href: "https://github.com/cloudevents/spec/blob/main/cloudevents/extensions/README.md",
