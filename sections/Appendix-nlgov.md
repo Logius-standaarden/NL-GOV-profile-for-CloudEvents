@@ -1,6 +1,6 @@
 # CloudEvents Extension Attributes
 
-Alongside the core specification, the CloudEvents project keeps a catalogue of documented extension attributes [[CloudEvents-Extensions]]. These cover concerns that the core attributes leave out on purpose. Examples are distributed tracing, partitioning, event ordering, expiry, data classification and references to externally stored data.
+Alongside the core specification, the CloudEvents project keeps a catalogue of documented extension attributes [CloudEvents-Extensions](https://github.com/cloudevents/spec/blob/main/cloudevents/extensions/README.md) . These cover concerns that the core attributes leave out on purpose. Examples are distributed tracing, partitioning, event ordering, expiry, data classification and references to externally stored data.
 
 CNCF states that documented extensions have no official standing and can be changed or removed at any time. That makes them unsuitable as a normative basis for a government-wide profile. Support for any documented extension is therefore optional for producers, consumers and intermediaries. Before defining a new extension attribute, a producer should check the catalogue.
 
