@@ -1,15 +1,29 @@
-# NLgov profile for CloudEvents
+<h1 align="center">NLgov profile for CloudEvents</h1>
 
-- [Gepubliceerde versie](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/)
-- [Werkversie](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/)
+<p align="center">
+  <em>Nederlands profiel gebaseerd op de <a href="https://cloudevents.io/">CloudEvents specificatie</a> toegespitst op de overheid. CloudEvents standaardiseert hoe gebeurtenissen tussen applicaties moeten worden beschreven.</em>
+</p>
 
-Het NLgov profile for CloudEvents is een specificatie voor het gestandaardiseerd
-beschrijven en uitwisselen van plaatsgevonden gebeurtenissen tussen applicaties.
-Het profiel is gebaseerd op de [CloudEvents specificatie](https://cloudevents.io/) die is ontwikkeld door de [Serverless Working Group](https://github.com/cncf/wg-serverless) van de [Cloud Native Computing Foundation](https://www.cncf.io/). CloudEvents is een internationale specificatie om gebeurtenisgegevens gestandaardiseerd te beschrijven en uit te kunnen wisselen met gebruik van verschillende gegevensformaten, transportprotocollen en voorzieningen.
+<p align="center">
+  <a href="https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/"><img alt="Gepubliceerde versie 1.1" src="https://img.shields.io/badge/Gepubliceerd-1.1-0B71CE?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"><b>Werkversie</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Logius-standaarden/NL-GOV-profile-for-CloudEvents/issues/new/choose"><b>Issue indienen</b></a> &nbsp;·&nbsp;
+  <a href="https://gitdocumentatie.logius.nl/publicatie/api/beheermodel/"><b>Beheermodel</b></a>
+</p>
+
+---
+
+## Over deze standaard
+
+CloudEvents is ontwikkeld door de [Serverless Working Group](https://github.com/cncf/wg-serverless) van de [Cloud Native Computing Foundation](https://www.cncf.io/).
+CloudEvents is een internationale specificatie om gebeurtenisgegevens gestandaardiseerd te beschrijven en uit te kunnen wisselen met gebruik van verschillende gegevensformaten, transportprotocollen en voorzieningen.
 
 Een van de uitgangspunten van het project Noficatieservices was om maximaal aan te sluiten bij wat wereldwijd gebruikelijk is. Bijv. om voor notificeren gebruik te maken van het [publish-subscribe patroon](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) en om voort te bouwen op bestaande berichtstandaarden (bijv. [CloudEvents](https://cloudevents.io/). In plaats van al uitgevonden wielen opnieuw (en waarschijnlijk slechter) te gaan uitvinden is aangesloten bij internationele ontwikkelingen op het gebied van gebeurtenisgedreven werken en notificeren. Daarop voortbouwend zijn aanvullende afspraken gemaakt voor gebruik binnen de context van de Nederlandse overheid. Zodat onnodige verschillen worden voorkomen en  interoperabiliteit wordt bevorderd.
 
-In 2021 is samen met een community van overheidsorganiaties en leveranciers de eerste versie van het [NLgov profile for CloudEvents](https://Logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) ontwikkeld. Als u een bijdrage wilt leveren aan verdere ontwikkeling van het profiel wordt dit zeer gewaardeerd. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](CONTRIBUTING.md).
+In 2021 is samen met een community van overheidsorganiaties en leveranciers de eerste versie van het profiel ontwikkeld. Als u een bijdrage wilt leveren aan verdere ontwikkeling van het profiel wordt dit zeer gewaardeerd. Informatie over hoe u kunt bijdragen vindt u op een [aparte pagina](CONTRIBUTING.md).
 
 Naast het profiel zijn ook een drietal handreikingen gemaakt die toelichten hoe het NLgov profile for CloudEvents is toe te passen bij gebruik van het:
 
